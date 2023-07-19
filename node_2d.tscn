@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://k41flcm3elfc"]
+
+[sub_resource type="Theme" id="Theme_orhtd"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 61.6426
+offset_top = -126.299
+offset_right = 101.643
+offset_bottom = -86.2987
+theme = SubResource("Theme_orhtd")
