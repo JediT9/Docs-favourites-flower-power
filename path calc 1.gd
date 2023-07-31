@@ -10,16 +10,6 @@ var initial_angle: float = deg_to_rad(45)
 var x_velocity: float = initial_velocity * cos(initial_angle)
 var y_velocity: float = initial_velocity * sin(initial_angle)
 
-func _init():
-	
-	pass
-	
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	# Update velocities and positions

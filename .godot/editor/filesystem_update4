@@ -1,5 +1,4 @@
 res://node_2d.tscn
-res://test.gd
-res://trial 1.gd
-res://trial 2.gd
-res://trial 3.gd
+res://path calc 2.gd
+res://path calc 1.gd
+res://path calc 3.gd
