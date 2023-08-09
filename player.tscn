@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://677efeaa6l5l"]
+
+[ext_resource type="Texture2D" uid="uid://byf80di54rpk3" path="res://sprites/idle-removebg-preview.png" id="1_p7cdi"]
+
+[node name="player" type="CharacterBody2D"]
+
+[node name="Idle-removebg-preview" type="Sprite2D" parent="."]
+texture = ExtResource("1_p7cdi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Idle-removebg-preview"]
