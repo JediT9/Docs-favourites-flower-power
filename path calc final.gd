@@ -1,5 +1,5 @@
 # Trial 3
-extends Sprite2D
+extends Node2D
 
 # Initial conditions of the launch
 var launch_velocity: float
