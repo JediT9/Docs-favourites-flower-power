@@ -1,11 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1691624379
+::res://::1691713990
 icon.svg::CompressedTexture2D::1028291091584429906::1689734893::1689734893::1::::<><>::
-node_2d.tscn::PackedScene::3292451824335291886::1691624301::0::1::::<><>::uid://owd2lqd4d0xy::::res://icon.svg<>res://path calc final.gd
+node_2d.tscn::PackedScene::3292451824335291886::1691625867::0::1::::<><>::uid://owd2lqd4d0xy::::res://icon.svg<>res://path calc final.gd
 path calc final.gd::GDScript::-1::1691368362::0::1::::<>Sprite2D<>::
-player.gd::GDScript::-1::1691624301::0::1::::<>Sprite2D<>::
+player.gd::GDScript::-1::1691625924::0::1::::<>Node2D<>::
 player.tscn::PackedScene::2243864596650263723::1691550419::0::1::::<><>::uid://byf80di54rpk3
-player_scene.tscn::PackedScene::7988071042480167344::1691624301::0::1::::<><>::uid://677efeaa6l5l::::res://player.tscn<>res://player.gd
+player_scene.gd::GDScript::-1::1691625252::0::1::::<>RefCounted<>::
+player_scene.tscn::PackedScene::7988071042480167344::1691625867::0::1::::<><>::res://player_scene.gd<>uid://677efeaa6l5l::::res://player.tscn<>res://player.gd
 ::res://sprites/::1691550003
 idle-removebg-preview.png::CompressedTexture2D::4083323296716080964::1691550003::1691550003::1::::<><>::
 idle.png::CompressedTexture2D::1517418199379592257::1691550003::1691550003::1::::<><>::
