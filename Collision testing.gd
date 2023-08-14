@@ -8,7 +8,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position.x -= 2
+	position.x -= 20 * float(delta)
 
 
 func _on_area_2d_2_area_entered(area):

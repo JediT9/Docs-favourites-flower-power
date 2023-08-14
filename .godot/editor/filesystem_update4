@@ -1,4 +1,5 @@
 res://node_2d.tscn
-res://path calc final.gd
+res://Area2D2.gd
 res://more testing.gd
-res://testing collision.gd
+res://path calc final.gd
+res://Collision testing.gd

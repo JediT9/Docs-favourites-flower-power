@@ -1,6 +1,3 @@
-# Trial 3
-extends Node2D
-
 # Initial conditions of the launch
 var launch_velocity: float
 var launch_angle: float
