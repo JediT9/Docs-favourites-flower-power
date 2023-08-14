@@ -21,14 +21,16 @@ func initial_y(initial_velocity: float, initial_angle: float):
 
 # Return the distance travelled in the y-direction after a given time
 func calculate_y_dist(time: float):
-	
 	# Define constants
 	const Y_ACCELERATION: float = -9.81
 	const ACCELERATION_EXP: int = 2
 	const ACCELERATION_MULTIPLIER: float = 0.5
-	
+
 	# Do calculations
-	var y_distance: float = time*initial_y_velocity + ACCELERATION_MULTIPLIER*Y_ACCELERATION*pow(time, ACCELERATION_EXP)
+	var y_distance: float = (
+		time * initial_y_velocity
+		+ ACCELERATION_MULTIPLIER * Y_ACCELERATION * pow(time, ACCELERATION_EXP)
+	)
 	return y_distance
 
 
