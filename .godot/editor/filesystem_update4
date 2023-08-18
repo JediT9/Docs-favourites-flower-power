@@ -3,3 +3,5 @@ res://Area2D2.gd
 res://more testing.gd
 res://path calc final.gd
 res://Collision testing.gd
+res://player.gd
+res://player_scene.tscn
