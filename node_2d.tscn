@@ -15,14 +15,14 @@ texture = ExtResource("1_7c506")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/Area2D"]
 polygon = PackedVector2Array(0, 0, 50, 2, 100, 0)
 
-[node name="Collider" type="Sprite2D" parent="."]
+[node name="Laser" type="Sprite2D" parent="."]
 position = Vector2(300, 0)
 texture = ExtResource("1_7c506")
 script = ExtResource("2_0evr1")
 
-[node name="Area2D2" type="Area2D" parent="Collider"]
+[node name="Laser_area" type="Area2D" parent="Laser"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collider/Area2D2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Laser/Laser_area"]
 polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 
-[connection signal="area_entered" from="Collider/Area2D2" to="Collider" method="_on_area_2d_2_area_entered"]
+[connection signal="area_entered" from="Laser/Laser_area" to="Laser" method="_on_laser_area_area_entered"]

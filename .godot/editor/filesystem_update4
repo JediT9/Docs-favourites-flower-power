@@ -1,5 +1,4 @@
-res://player_scene.tscn
-res://player.gd
+res://laser.gd
 res://node_2d.tscn
-res://player.tscn
+res://player.gd
 res://addSprite.gd
