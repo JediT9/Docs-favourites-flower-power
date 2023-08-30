@@ -28,12 +28,12 @@ func _init(center_pos, laser_size, laser_texture, laser_range, head_node):
 	laser_sprite.visible = true
 	laser_shape.size = Vector2(size[0], size[1])
 	laser_collision_area.shape = laser_shape
+	laser_sprite.set_script(load("res://laser_movement.gd"))
 	
 	# Add nodes to scene tree
 	laser_area.add_child(laser_collision_area)
 	laser_sprite.add_child(laser_area)
 	node.add_child(laser_sprite)
-	laser_sprite.set_script(load("res://laser_movement.gd"))
 	
 func return_info():
 	return central_position

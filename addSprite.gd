@@ -9,7 +9,4 @@ func _ready():
 	print(laser_class)
 	
 func get_values():
-	print("hi")
-	print(laser_class)
-	print(laser_class.return_info())
 	return [laser_class.central_position, laser_class.movement_range]
