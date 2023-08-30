@@ -1,15 +1,16 @@
 extends Sprite2D
 
-var central_position: Array[float]
-var movement_range: int
-var time_elapsed: float = 0
+
+var information
+var time_elapsed = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	information = get_parent().get_values()
+	print(information)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	time_elapsed += delta
-	position.y = central_position[1] + movement_range*sin(time_elapsed)
+	position.y = information[0][1] + information[1]*sin(time_elapsed)

@@ -1,5 +1,5 @@
 res://node_2d.tscn
 res://player.gd
-res://laser.gd
 res://addSprite.gd
+res://laser.gd
 res://laser_movement.gd
