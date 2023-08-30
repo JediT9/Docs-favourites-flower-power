@@ -1,13 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1693259259
-addSprite.gd::GDScript::-1::1693258222::0::1::::<>Node2D<>::
+::res://::1693359656
+addSprite.gd::GDScript::-1::1693261427::0::1::::<>Node2D<>::
 icon.svg::CompressedTexture2D::1028291091584429906::1689734763::1689734859::1::::<><>::
-laser.gd::GDScript::-1::1693258222::0::1::::<>Sprite2D<>::
-node_2d.tscn::PackedScene::3292451824335291886::1693258222::0::1::::<><>::uid://owd2lqd4d0xy::::res://icon.svg<>res://addSprite.gd<>res://laser.gd
+laser.gd::GDScript::-1::1693261248::0::1::::laser<>Sprite2D<>::
+node_2d.tscn::PackedScene::3292451824335291886::1693261427::0::1::::<><>::uid://owd2lqd4d0xy::::res://icon.svg<>res://addSprite.gd<>res://laser.gd
 path calc final.gd::GDScript::-1::1692321845::0::1::::<>RefCounted<>::
-player.gd::GDScript::-1::1692321834::0::1::::<>Node2D<>::
-player.tscn::PackedScene::2243864596650263723::1692321834::0::1::::<><>::uid://byf80di54rpk3::::res://sprites/idle-removebg-preview.png
-player_scene.tscn::PackedScene::7988071042480167344::1693258222::0::1::::<><>::uid://677efeaa6l5l::::res://player.tscn<>res://player.gd
+player.gd::GDScript::-1::1693260873::0::1::::<>Node2D<>::
+player.tscn::PackedScene::2243864596650263723::1692321834::0::1::::<><>::uid://byf80di54rpk3
+player_scene.tscn::PackedScene::7988071042480167344::1693258222::0::1::::<><>::uid://677efeaa6l5l
 ::res://sprites/::1692321834
 idle-removebg-preview.png::CompressedTexture2D::4083323296716080964::1692321834::1692321834::1::::<><>::
 idle.png::CompressedTexture2D::1517418199379592257::1692321834::1692321834::1::::<><>::

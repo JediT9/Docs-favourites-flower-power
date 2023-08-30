@@ -1,23 +1,28 @@
-class_name laser extends Sprite2D
+class_name laser_object extends Sprite2D
 
-# Initiate variable
-var centralPosition: Array
-var moving: bool
-var size: Array
-var movementRange: int = 0
-var timeElapsed: int = 0
+# Initiate variables
+var central_position: Array[float]
+var size: Array[float]
+var laser_texture
+var movement_range: int = 0
+var time_elapsed: float = 0
+
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	position.x = centralPosition[0]
-	position.y = centralPosition[1]
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	timeElapsed += delta
-	position.y += movementRange*sin(timeElapsed)*delta
-
-
-func _on_laser_area_area_entered(area):
-	pass # Will end the game
+func _init():
+	# Create nodes
+	var laser_sprite = Sprite2D.new()
+	var laser_area: Area2D = Area2D.new()
+	var laser_collision_area: CollisionShape2D = CollisionShape2D.new()
+	var laser_shape: RectangleShape2D = RectangleShape2D.new()
+	
+	# Assign shape to the laser shape
+	laser_sprite.texture = laser_texture
+	laser_sprite.set_script(load("res://laser_movement.gd"))
+	laser_shape.size = Vector2(size[0], size[1])
+	laser_collision_area.shape = laser_shape
+	
+	# Add nodes to scene tree
+	laser_area.add_child(laser_collision_area)
+	laser_sprite.add_child(laser_area)
+	self.add_child(laser_sprite)

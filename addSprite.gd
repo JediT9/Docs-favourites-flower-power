@@ -1,10 +1,6 @@
 extends Node2D
 
-var sprite = Sprite2D.new()
-
 func _ready():
-	print("Hi")
-	sprite.texture = load("res://sprites/idle.png")
-	sprite.position.x = 300
-	sprite.position.y = 300
-	self.add_child(sprite)
+	# Load classes
+	var laser_class = load("res://laser.gd").new([100, 100], [100, 100], load("res://sprites/idle.png"), 100)
+
