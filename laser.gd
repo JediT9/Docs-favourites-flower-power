@@ -11,6 +11,23 @@ var time_elapsed: float = 0
 
 # Called when the node enters the scene tree for the first time.
 func _init(center_pos, laser_size, laser_texture, laser_range, head_node):
+	
+	# Check variables contain valid data types
+	if typeof(center_pos) != TYPE_ARRAY:
+		pass # Call reset function
+		
+	if typeof(laser_size) != TYPE_ARRAY:
+		pass # Call reset function
+		
+	if typeof(laser_texture) != TYPE_OBJECT:
+		pass # Call reset function
+		
+	if typeof(laser_range) != TYPE_INT:
+		pass # Call reset function
+		
+	if typeof(head_node) != TYPE_OBJECT:
+		pass # Call reset function
+	
 	# Update class variables
 	node = head_node
 	central_position = center_pos
