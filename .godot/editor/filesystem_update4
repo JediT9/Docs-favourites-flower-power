@@ -1,3 +1,5 @@
 res://node_2d.tscn
 res://player.gd
-res://addSprite.gd
+res://path calc final.gd
+res://class_tests.gd
+res://main.tscn
