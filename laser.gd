@@ -42,6 +42,8 @@ func _init(center_pos, laser_size, laser_texture, laser_range, head_node):
 	# Assign shape to the laser shape
 	laser_sprite.texture = laser_texture
 	laser_sprite.visible = true
+	laser_sprite.position.x = center_pos[0]
+	laser_sprite.position.y = center_pos[1]
 	laser_shape.size = Vector2(size[0], size[1])
 	laser_collision_area.shape = laser_shape
 	laser_sprite.set_script(load("res://laser_movement.gd"))

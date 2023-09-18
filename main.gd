@@ -1,20 +1,44 @@
 extends Node2D
 
-var laser_class: laser_object
-var path_class: projectile_path_calc
-var spike_class: spike_object
+var laser_class: Resource
+var path_class: Resource
+var spike_class: Resource
+var obstacles: Dictionary
+var current_laser: Array
+var spikes: Array
+var lasers: Array
 var position_stuff
 
 
 func _ready():
 	# Load classes
-	laser_class = load("res://laser.gd").new(
-		[100, 100], [100, 100], load("res://sprites/idle.png"), 100, self
-	)
-	path_class = load("res://path calc final.gd").new(100, 1, 0, 0)
-	spike_class = load("res://spike.gd").new(
-		[600, 600], [50, 50], self, load("res://sprites/jump.png")
-	)
+	laser_class = load("res://laser.gd")
+	path_class = load("res://path calc final.gd")
+	spike_class = load("res://spike.gd")
+	
+	# Create obstacles
+	spikes = []
+	lasers = []
+	
+	# Create spikes
+	spikes.append(spike_class.new(
+		[600, 600], [50, 50], self, load("res://spike.svg")
+	))
+	
+	# Create lasers
+	lasers.append(laser_class.new(
+		[300, 300], [100, 100], load("res://lazer.svg"), 100, self
+	))
+	current_laser = [lasers[-1].central_position, lasers[-1].movement_range]
+	
+
+# Create a laser using specified values
+func create_laser(laser_position, size, image, movement, node):
+	# Update the current laser then create a laser
+	current_laser = [laser_position, movement]
+	lasers.append(laser_class.new(
+		laser_position, size, image, movement, node
+	))
 
 
 func _process(delta):
@@ -23,4 +47,4 @@ func _process(delta):
 
 
 func get_values():
-	return [laser_class.central_position, laser_class.movement_range]
+	return current_laser
