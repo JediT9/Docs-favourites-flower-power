@@ -20,25 +20,28 @@ func _ready():
 	spikes = []
 	lasers = []
 	
+	# Create player data
+	var path: projectile_path_calc = path_class.new(10, 1, 100, 100)
+	
 	# Create spikes
 	spikes.append(spike_class.new(
 		[600, 600], [50, 50], self, load("res://spike.svg")
 	))
 	
 	# Create lasers
-	lasers.append(laser_class.new(
+	create_laser(
 		[300, 300], [100, 100], load("res://lazer.svg"), 100, self
-	))
-	current_laser = [lasers[-1].central_position, lasers[-1].movement_range]
-	
+	)
+
 
 # Create a laser using specified values
 func create_laser(laser_position, size, image, movement, node):
 	# Update the current laser then create a laser
-	current_laser = [laser_position, movement]
-	lasers.append(laser_class.new(
+	var new_laser = laser_class.new(
 		laser_position, size, image, movement, node
-	))
+	)
+	current_laser = [laser_position, movement]
+	lasers.append(new_laser)
 
 
 func _process(delta):
@@ -47,4 +50,5 @@ func _process(delta):
 
 
 func get_values():
+	print(current_laser)
 	return current_laser
