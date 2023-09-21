@@ -7,6 +7,7 @@ var obstacles: Dictionary
 var current_laser: Array
 var spikes: Array
 var lasers: Array
+var path: projectile_path_calc
 var position_stuff
 
 
@@ -21,7 +22,7 @@ func _ready():
 	lasers = []
 	
 	# Create player data
-	var path: projectile_path_calc = path_class.new(10, 1, 100, 100)
+	path = path_class.new(10, 1, 100, 100)
 	
 	# Create spikes
 	spikes.append(spike_class.new(
@@ -32,21 +33,28 @@ func _ready():
 	create_laser(
 		[300, 300], [100, 100], load("res://lazer.svg"), 100, self
 	)
+	create_laser(
+		[1000, 600], [100, 100], load("res://lazer.svg"), 0, self
+	)
+	create_laser(
+		[2000, 0], [100, 100], load("res://lazer.svg"), 50, self
+	)
 
 
 # Create a laser using specified values
 func create_laser(laser_position, size, image, movement, node):
 	# Update the current laser then create a laser
-	var new_laser = laser_class.new(
+	current_laser = [laser_position, movement]
+	var new_laser: laser_object = laser_class.new(
 		laser_position, size, image, movement, node
 	)
-	current_laser = [laser_position, movement]
 	lasers.append(new_laser)
+	print(lasers)
 
 
 func _process(delta):
 	# gets the position values for the character
-	position_stuff = path_class.calc_positions(delta)
+	position_stuff = path.calc_positions(delta)
 
 
 func get_values():
