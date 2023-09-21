@@ -49,7 +49,6 @@ func create_laser(laser_position, size, image, movement, node):
 		laser_position, size, image, movement, node
 	)
 	lasers.append(new_laser)
-	print(lasers)
 
 
 func _process(delta):
@@ -58,5 +57,4 @@ func _process(delta):
 
 
 func get_values():
-	print(current_laser)
 	return current_laser
