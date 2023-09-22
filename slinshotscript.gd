@@ -7,25 +7,28 @@ enum flight_states{
 	flying,
 	reset,
 }
-
+var line
 var player_state
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player_state = flight_states.idle 
+	line = $Line2D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	match flight_states:
-		player_state.idle:
+	match player_state:
+		flight_states.idle:
 			pass
-		player_state.pulling:
+		flight_states.pulling:
 			if Input.is_action_pressed("left_click"):
 				var mouse_position = get_global_mouse_position()
-		player_state.flying:
+				print(mouse_position)
+				line.points[1] = mouse_position
+		flight_states.flying:
 			pass
-		player_state.reset:
+		flight_states.reset:
 			pass
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
-	pass # Replace with function body.
+	player_state = flight_states.pulling

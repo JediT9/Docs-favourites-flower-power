@@ -1,14 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://co3ao3r47f5sn"]
+[gd_scene load_steps=4 format=3 uid="uid://co3ao3r47f5sn"]
 
 [ext_resource type="Script" path="res://slinshotscript.gd" id="1_fj6qc"]
+[ext_resource type="Texture2D" uid="uid://owd2lqd4d0xy" path="res://icon.svg" id="1_s8oas"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x46x1"]
-radius = 57.4282
+radius = 128.876
 
 [node name="Sprite2D" type="Node2D"]
 position = Vector2(267, 177)
 
 [node name="Node2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_s8oas")
 script = ExtResource("1_fj6qc")
 
 [node name="Line2D" type="Line2D" parent="Node2D"]
@@ -20,7 +22,7 @@ default_color = Color(0.458824, 0.458824, 0.458824, 1)
 position = Vector2(-1, -41)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D"]
-position = Vector2(0, -1)
+position = Vector2(1, 48)
 shape = SubResource("CircleShape2D_x46x1")
 
 [connection signal="input_event" from="Node2D/Area2D" to="Node2D" method="_on_area_2d_input_event"]
