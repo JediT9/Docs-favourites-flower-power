@@ -1,15 +1,18 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1694998922
+::res://::1695343119
 icon.svg::CompressedTexture2D::1028291091584429906::1689734763::1689734859::1::::<><>::
-laser.gd::GDScript::-1::1694998588::0::1::::laser_object<>Sprite2D<>::
-laser_movement.gd::GDScript::-1::1694998588::0::1::::<>Sprite2D<>::
-main.gd::GDScript::-1::1694998910::0::1::::<>Node2D<>::
-main.tscn::PackedScene::902488916078011808::1694998866::0::1::::<><>::res://main.gd
-path calc final.gd::GDScript::-1::1694998588::0::1::::projectile_path_calc<>RefCounted<>::
-player.gd::GDScript::-1::1694998853::0::1::::<>Node2D<>::
-player.tscn::PackedScene::2243864596650263723::1692321834::0::1::::<><>::uid://byf80di54rpk3
-player_scene.tscn::PackedScene::7988071042480167344::1693258222::0::1::::<><>::uid://677efeaa6l5l
-spike.gd::GDScript::-1::1694998762::0::1::::spike_object<>RefCounted<>::
+laser.gd::GDScript::-1::1695177327::0::1::::laser_object<>Sprite2D<>::
+laser_movement.gd::GDScript::-1::1695254211::0::1::::<>Sprite2D<>::
+lazer.svg::CompressedTexture2D::7676314529666780511::1694999035::1694999157::1::::<><>::
+main.gd::GDScript::-1::1695342712::0::1::::<>Node2D<>::
+main.tscn::PackedScene::902488916078011808::1695342712::0::1::::<><>::res://main.gd<>res://testing camera.gd
+path calc final.gd::GDScript::-1::1694999043::0::1::::projectile_path_calc<>RefCounted<>::
+player.gd::GDScript::-1::1695252267::0::1::::<>Node2D<>::
+player.tscn::PackedScene::2243864596650263723::1692321834::0::1::::<><>::uid://byf80di54rpk3::::res://sprites/idle-removebg-preview.png
+player_scene.tscn::PackedScene::7988071042480167344::1693258222::0::1::::<><>::uid://677efeaa6l5l::::res://player.tscn<>res://player.gd
+spike.gd::GDScript::-1::1694999043::0::1::::spike_object<>RefCounted<>::
+spike.svg::CompressedTexture2D::1952147494178405666::1694999035::1694999157::1::::<><>::
+testing camera.gd::GDScript::-1::1695342712::0::1::::<>Sprite2D<>::
 ::res://sprites/::1692321834
 idle-removebg-preview.png::CompressedTexture2D::4083323296716080964::1692321834::1692321834::1::::<><>::
 idle.png::CompressedTexture2D::1517418199379592257::1692321834::1692321834::1::::<><>::
