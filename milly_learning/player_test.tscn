@@ -32,4 +32,4 @@ script = ExtResource("3_wcf75")
 position = Vector2(-0.0250001, 0.01)
 shape = SubResource("RectangleShape2D_1u4th")
 
-[connection signal="body_entered" from="Finishcube" to="Finishcube" method="_on_body_entered"]
+[connection signal="body_entered" from="Finishcube" to="Finishcube" method="_on_body_entered" flags=18]
