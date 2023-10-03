@@ -1,2 +1,6 @@
-res://main.tscn
 res://player.gd
+res://laser.tscn
+res://main.tscn
+res://spike.tscn
+res://throwing_the_character.tscn
+res://slinshotscript.gd

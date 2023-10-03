@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dadojlmubj5n3"]
+
+[ext_resource type="Texture2D" uid="uid://22vt4egw6w23" path="res://spike.svg" id="1_spf35"]
+
+[node name="spike" type="Node2D"]
+
+[node name="spike_sprite" type="Sprite2D" parent="."]
+rotation = 0.0349066
+texture = ExtResource("1_spf35")
+
+[node name="spike_area" type="Area2D" parent="spike_sprite"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="spike_sprite/spike_area"]
+polygon = PackedVector2Array(-247.985, 90.7098, -94.5075, -184.814, 71.8197, 79.542)
