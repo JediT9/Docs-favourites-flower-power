@@ -7,7 +7,7 @@ enum flight_states{
 	flying,
 	reset,
 }
-var line
+var line: Line2D
 var player_state
 
 # Called when the node enters the scene tree for the first time.
@@ -22,9 +22,13 @@ func _process(delta):
 			pass
 		flight_states.pulling:
 			if Input.is_action_pressed("left_click"):
+				line.visible = true
 				var mouse_position = get_global_mouse_position()
-				print(mouse_position)
-				line.points[1] = mouse_position
+				var line_end_pos: Vector2 = Vector2(mouse_position[0] - position.x, mouse_position[1] - position.y)
+				line.points[1] = line_end_pos
+			else:
+				line.visible = false
+				player_state = flight_states.idle
 		flight_states.flying:
 			pass
 		flight_states.reset:
