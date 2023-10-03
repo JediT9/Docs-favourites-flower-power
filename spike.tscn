@@ -5,6 +5,7 @@
 [node name="spike" type="Node2D"]
 
 [node name="spike_sprite" type="Sprite2D" parent="."]
+position = Vector2(89, 36)
 rotation = 0.0349066
 texture = ExtResource("1_spf35")
 

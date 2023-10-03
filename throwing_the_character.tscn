@@ -9,7 +9,6 @@ radius = 128.876
 [node name="character_throw" type="Node2D"]
 
 [node name="Node2D" type="Sprite2D" parent="."]
-position = Vector2(193, 142)
 texture = ExtResource("1_s8oas")
 script = ExtResource("1_fj6qc")
 

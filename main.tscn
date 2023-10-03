@@ -7,30 +7,29 @@
 [node name="Main" type="Node2D"]
 
 [node name="laser" parent="." instance=ExtResource("2_qinl0")]
-position = Vector2(270, 196)
+position = Vector2(392, 193)
 
 [node name="laser2" parent="." instance=ExtResource("2_qinl0")]
-position = Vector2(-18, 69)
+position = Vector2(268, 100)
 
 [node name="spike" parent="." instance=ExtResource("2_fud85")]
-position = Vector2(63, 627)
+position = Vector2(41, 618)
 scale = Vector2(0.25, 0.25)
 
 [node name="spike2" parent="." instance=ExtResource("2_fud85")]
-position = Vector2(143, 627)
+position = Vector2(122, 618)
 scale = Vector2(0.25, 0.25)
 
 [node name="spike3" parent="." instance=ExtResource("2_fud85")]
-position = Vector2(223, 627)
+position = Vector2(203, 618)
 scale = Vector2(0.25, 0.25)
 
 [node name="spike4" parent="." instance=ExtResource("2_fud85")]
-position = Vector2(303, 627)
+position = Vector2(285, 618)
 scale = Vector2(0.25, 0.25)
 
 [node name="spike5" parent="." instance=ExtResource("2_fud85")]
-position = Vector2(383, 627)
+position = Vector2(366, 618)
 scale = Vector2(0.25, 0.25)
 
 [node name="Sprite2D" parent="." instance=ExtResource("3_yw1nm")]
-position = Vector2(151, 250)

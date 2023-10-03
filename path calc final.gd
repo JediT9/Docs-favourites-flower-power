@@ -16,7 +16,7 @@ const ACCELERATION_MULTIPLIER: float = 0.5
 
 
 # Initialize the class
-func _init(velocity, angle, x_pos, y_pos):
+func _init(velocity, angle, x_pos, y_pos) -> void:
 	# Assign initial variables
 	launch_velocity = velocity
 	launch_angle = angle
@@ -29,7 +29,7 @@ func _init(velocity, angle, x_pos, y_pos):
 
 
 # Return the distance travelled in the y-direction after a given time
-func calculate_y_dist(time: float):
+func calculate_y_dist(time: float) -> float:
 	# Do calculations
 	var y_distance: float = (
 		time * initial_y_velocity
@@ -39,14 +39,14 @@ func calculate_y_dist(time: float):
 
 
 # Return the distance travelled in the x-direction after a given time
-func calculate_x_dist(time: float):
+func calculate_x_dist(time: float) -> float:
 	var x_distance: float = time * initial_x_velocity
 	return x_distance
 
 
 # Calculate the actual positions after a time
-func calc_positions(delta: float):
+func calc_positions(delta: float) -> Vector2:
 	time += delta
 	var position_y: float = calculate_y_dist(time) + initial_y_pos
 	var position_x: float = calculate_x_dist(time) + initial_x_pos
-	return [position_x, position_y]
+	return Vector2(position_x, position_y)
