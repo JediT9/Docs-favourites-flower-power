@@ -1,4 +1,4 @@
-extends Sprite2D
+extends CharacterBody2D
 # tutorial: https://www.youtube.com/watch?v=Azsw4NSc86w
 
 enum flight_states{
@@ -12,6 +12,11 @@ var player_state
 var path_calc_class = load("res://path calc final.gd")
 var path_operator: projectile_path_calc = null
 var intended_position: Vector2
+var time: float = 0
+
+func handle_hit_floor():
+	path_operator = null
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,9 +24,17 @@ func _ready():
 	line = $Line2D
 	position = Vector2(100, 500)
 	intended_position = position
+	
+	# Connect to the floor node
+	var floor_node: Node2D = get_tree().root.get_child(-1).get_child(-1)
+	print(floor_node)
+	floor_node.hit_floor.connect(self.handle_hit_floor)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	# Update the time
+	time += delta
+
 	match player_state:
 		flight_states.idle:
 			pass
@@ -46,11 +59,8 @@ func _process(delta):
 	
 	# Move the character
 	if path_operator != null:
-		if position == intended_position:   # If the sprite hasn't been teleported by a worldborder
-			position = path_operator.calc_positions(delta)
-			intended_position = position
-		else:
-			path_operator = null
+		velocity = path_operator.calc_velocities(time)
+		move_and_slide()
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	player_state = flight_states.pulling

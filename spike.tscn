@@ -4,12 +4,12 @@
 
 [node name="spike" type="Node2D"]
 
-[node name="spike_sprite" type="Sprite2D" parent="."]
+[node name="spike_area" type="Area2D" parent="."]
 position = Vector2(89, 36)
 rotation = 0.0349066
-texture = ExtResource("1_spf35")
 
-[node name="spike_area" type="Area2D" parent="spike_sprite"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="spike_sprite/spike_area"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="spike_area"]
 polygon = PackedVector2Array(-247.985, 90.7098, -94.5075, -184.814, 71.8197, 79.542)
+
+[node name="spike_sprite" type="Sprite2D" parent="spike_area"]
+texture = ExtResource("1_spf35")

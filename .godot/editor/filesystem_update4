@@ -1,7 +1,8 @@
-res://spike.tscn
+res://main.tscn
 res://player.gd
 res://throwing_the_character.tscn
-res://laser.tscn
-res://main.tscn
 res://slinshotscript.gd
+res://spike.tscn
+res://laser.tscn
 res://path calc final.gd
+res://world border.gd

@@ -7,7 +7,6 @@ var initial_y_pos: float
 var initial_x_pos: float
 var initial_y_velocity: float
 var initial_x_velocity: float
-var time: float = 0
 
 # Define constants
 const Y_ACCELERATION: float = 9.81
@@ -42,11 +41,19 @@ func calculate_y_dist(time: float) -> float:
 func calculate_x_dist(time: float) -> float:
 	var x_distance: float = time * initial_x_velocity
 	return x_distance
+	
+	
+func calculate_y_velocity(time: float) -> float:
+	var speed: float = initial_y_velocity + Y_ACCELERATION * time
+	return speed
+	
+
+func calc_velocities(time: float) -> Vector2:
+	return Vector2(initial_x_velocity, calculate_y_velocity(time))
 
 
 # Calculate the actual positions after a time
-func calc_positions(delta: float) -> Vector2:
-	time += delta
+func calc_positions(time: float) -> Vector2:
 	var position_y: float = calculate_y_dist(time) + initial_y_pos
 	var position_x: float = calculate_x_dist(time) + initial_x_pos
 	return Vector2(position_x, position_y)
