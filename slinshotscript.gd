@@ -16,6 +16,10 @@ var time: float = 0
 
 func handle_hit_floor():
 	path_operator = null
+	if position.y < 100:
+		position.y = 65
+	else:
+		position.y = 585
 
 
 # Called when the node enters the scene tree for the first time.
@@ -45,9 +49,11 @@ func _process(delta):
 				var line_end_pos: Vector2 = Vector2(mouse_position[0] - position.x, mouse_position[1] - position.y)
 				line.points[1] = line_end_pos
 			elif Input.is_action_just_released("left_click"):
-				print("hi")
 				var speed: float = sqrt(pow(line.points[1][0], 2) + pow(line.points[1][1], 2))
 				var angle: float = atan(line.points[1][1]/line.points[1][0])
+				if line.points[1][0] > 0:
+					angle += PI
+				time = 0
 				path_operator = path_calc_class.new(speed, angle, position.x, position.y)
 			else:
 				line.visible = false
