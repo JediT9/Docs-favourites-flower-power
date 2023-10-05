@@ -1,6 +1,6 @@
-res://spike.tscn
-res://player.gd
 res://main.tscn
+res://player.gd
+res://spike.tscn
 res://throwing_the_character.tscn
 res://laser.tscn
 res://slinshotscript.gd

@@ -31,7 +31,6 @@ func _ready():
 	
 	# Connect to the floor node
 	var floor_node: Node2D = get_tree().root.get_child(-1).get_child(-1)
-	print(floor_node)
 	floor_node.hit_floor.connect(self.handle_hit_floor)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

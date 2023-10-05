@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696395768
+::res://::1696545631
 icon.svg::CompressedTexture2D::1028291091584429906::1691289052::1691289052::1::::<><>::
 laser.gd::GDScript::-1::1696232725::0::1::::laser_object<>Sprite2D<>::
-laser.tscn::PackedScene::5255245959130484133::1696380611::0::1::::<><>::uid://cswbpvsivilsb::::res://lazer - 10x150mm.svg
+laser.tscn::PackedScene::5255245959130484133::1696401113::0::1::::<><>::uid://cswbpvsivilsb::::res://lazer - 10x150mm.svg
 laser_movement.gd::GDScript::-1::1696232725::0::1::::<>Sprite2D<>::
 lazer 10x200mm.svg::CompressedTexture2D::401248295573125358::1696232725::1696283598::1::::<><>::
 lazer - 5x100mm.svg::CompressedTexture2D::4386047342846374278::1696232725::1696395094::1::::<><>::
@@ -12,18 +12,18 @@ lazer - 10x100mm.svg::CompressedTexture2D::2579384131564870084::1696232725::1696
 lazer - 10x150mm.svg::CompressedTexture2D::6081745498550146721::1696232725::1696283598::1::::<><>::
 lazer.svg::CompressedTexture2D::7676314529666780511::1696232725::1696232725::1::::<><>::
 main.gd::GDScript::-1::1696232725::0::1::::<>Node2D<>::
-main.tscn::PackedScene::902488916078011808::1696380610::0::1::::<><>::uid://dadojlmubj5n3::::res://spike.tscn<>uid://cg4xer6ftqrrp::::res://laser.tscn<>uid://co3ao3r47f5sn::::res://throwing_the_character.tscn<>res://world border.gd
+main.tscn::PackedScene::902488916078011808::1696401145::0::1::::<><>::uid://dadojlmubj5n3::::res://spike.tscn<>uid://cg4xer6ftqrrp::::res://laser.tscn<>uid://co3ao3r47f5sn::::res://throwing_the_character.tscn<>res://world border.gd
 path calc final.gd::GDScript::-1::1696377891::0::1::::projectile_path_calc<>RefCounted<>::
 player.gd::GDScript::-1::1696395382::0::1::::<>Sprite2D<>::
 playersscript.gd::GDScript::-1::1696231483::0::1::::<>Sprite2D<>::
 single_spike.svg::CompressedTexture2D::3131557215182969134::1696232725::1696283598::1::::<><>::
-slinshotscript.gd::GDScript::-1::1696380405::0::1::::<>CharacterBody2D<>::
+slinshotscript.gd::GDScript::-1::1696400950::0::1::::<>CharacterBody2D<>::
 spike.gd::GDScript::-1::1696232725::0::1::::spike_object<>RefCounted<>::
 spike.png::CompressedTexture2D::4866926063658689598::1696395768::1696395769::1::::<><>::
 spike.svg::CompressedTexture2D::1952147494178405666::1696232725::1696232725::1::::<><>::
-spike.tscn::PackedScene::7166321891590295334::1696395382::0::1::::<><>::uid://cblttc0p8pjso::::res://spike.png
+spike.tscn::PackedScene::7166321891590295334::1696401113::0::1::::<><>::uid://cblttc0p8pjso::::res://spike.png
 three_spikes.svg::CompressedTexture2D::8537878141673171090::1696232725::1696283598::1::::<><>::
-throwing_the_character.tscn::PackedScene::5813314254823098737::1696380611::0::1::::<><>::res://slinshotscript.gd<>uid://owd2lqd4d0xy::::res://icon.svg
+throwing_the_character.tscn::PackedScene::5813314254823098737::1696401113::0::1::::<><>::res://slinshotscript.gd<>uid://c18ehhx03m0jo::::res://sprites/walk_2-removebg-preview.png
 two_spikes.svg::CompressedTexture2D::5632224444127614960::1696232725::1696283599::1::::<><>::
 world border.gd::GDScript::-1::1696378685::0::1::::<>Node2D<>::
 ::res://sprites/::1692660752
