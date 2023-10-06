@@ -14,6 +14,7 @@ var path_operator: projectile_path_calc = null
 var intended_position: Vector2
 var time: float = 0
 var parent_node: Node2D
+var camera: Camera2D
 
 func handle_hit_floor():
 	path_operator = null
@@ -29,6 +30,9 @@ func _ready():
 	line = $Line2D
 	intended_position = position
 	parent_node = get_parent()
+	camera = parent_node.get_node("Camera2D")
+	print(DisplayServer.window_get_size())
+	camera.position.y = (DisplayServer.window_get_size()[1] / 2) - parent_node.position.y
 	
 	# Connect to the floor node
 	var floor_node: Node2D = get_tree().root.get_child(-1).get_child(-1)
@@ -67,6 +71,9 @@ func _process(delta):
 	if path_operator != null:
 		velocity = path_operator.calc_velocities(time)
 		move_and_slide()
+	
+	# Move the camera
+	camera.position.x = position.x
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	player_state = flight_states.pulling
