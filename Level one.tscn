@@ -16,7 +16,7 @@ distance = 0.2
 [node name="Level one" type="Node2D"]
 
 [node name="Main character" parent="." instance=ExtResource("1_xaafr")]
-position = Vector2(95, 583)
+position = Vector2(86, 577)
 
 [node name="Spikes" type="Node2D" parent="."]
 
@@ -42,10 +42,38 @@ scale = Vector2(0.2, 0.2)
 position = Vector2(591, 616)
 scale = Vector2(0.2, 0.2)
 
+[node name="spike6" parent="Spikes" instance=ExtResource("2_dimhv")]
+texture_filter = 1
+texture_repeat = 3
+position = Vector2(480, 32)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+
+[node name="spike7" parent="Spikes" instance=ExtResource("2_dimhv")]
+position = Vector2(562, 32)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+
+[node name="spike8" parent="Spikes" instance=ExtResource("2_dimhv")]
+position = Vector2(644, 32)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+
+[node name="spike9" parent="Spikes" instance=ExtResource("2_dimhv")]
+position = Vector2(726, 32)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+
+[node name="spike10" parent="Spikes" instance=ExtResource("2_dimhv")]
+position = Vector2(808, 32)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+
 [node name="lasers" type="Node2D" parent="."]
 
 [node name="laser" parent="lasers" instance=ExtResource("3_f346c")]
-position = Vector2(392, 193)
+position = Vector2(767, 300)
+scale = Vector2(1, 2)
 
 [node name="laser2" parent="lasers" instance=ExtResource("3_f346c")]
 position = Vector2(254, 227)
