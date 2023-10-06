@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cg4xer6ftqrrp"]
+[gd_scene load_steps=4 format=3 uid="uid://cg4xer6ftqrrp"]
 
+[ext_resource type="Script" path="res://laser_signal.gd" id="1_0xb4s"]
 [ext_resource type="Texture2D" uid="uid://cswbpvsivilsb" path="res://lazer - 10x150mm.svg" id="1_gpftt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dbnn0"]
 size = Vector2(46.6584, 552.935)
 
 [node name="laser" type="Node2D"]
+script = ExtResource("1_0xb4s")
 
 [node name="laser_area" type="Area2D" parent="."]
 position = Vector2(-2, 6)
@@ -15,5 +17,9 @@ scale = Vector2(0.202771, 0.211598)
 position = Vector2(11.1925, -30.7186)
 shape = SubResource("RectangleShape2D_dbnn0")
 
-[node name="laser_sprite" type="Sprite2D" parent="laser_area"]
+[node name="laser_sprite" type="Sprite2D" parent="."]
+position = Vector2(-2, 6)
+scale = Vector2(0.202771, 0.211598)
 texture = ExtResource("1_gpftt")
+
+[connection signal="area_entered" from="laser_area" to="." method="_on_laser_area_area_entered"]
