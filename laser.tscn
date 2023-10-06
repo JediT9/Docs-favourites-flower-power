@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://cg4xer6ftqrrp"]
 
-[ext_resource type="Script" path="res://laser_signal.gd" id="1_0xb4s"]
 [ext_resource type="Texture2D" uid="uid://cswbpvsivilsb" path="res://lazer - 10x150mm.svg" id="1_gpftt"]
+[ext_resource type="Script" path="res://laser_endgame.gd" id="1_vpkq1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dbnn0"]
 size = Vector2(46.6584, 552.935)
 
 [node name="laser" type="Node2D"]
-script = ExtResource("1_0xb4s")
+script = ExtResource("1_vpkq1")
 
 [node name="laser_area" type="Area2D" parent="."]
 position = Vector2(-2, 6)

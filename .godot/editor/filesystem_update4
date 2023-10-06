@@ -1,9 +1,11 @@
-res://main.tscn
+res://Level one.tscn
 res://player.gd
 res://spike.tscn
 res://throwing_the_character.tscn
 res://laser.tscn
-res://slinshotscript.gd
 res://laser_signal.gd
+res://Level one.gd
+res://laser_endgame.gd
 res://spike_collision.gd
-res://Level one.tscn
+res://world border.gd
+res://slinshotscript.gd

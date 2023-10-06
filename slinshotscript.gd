@@ -31,7 +31,6 @@ func _ready():
 	intended_position = position
 	parent_node = get_parent()
 	camera = parent_node.get_node("Camera2D")
-	print(DisplayServer.window_get_size())
 	camera.position.y = (DisplayServer.window_get_size()[1] / 2.0) - parent_node.position.y
 	
 	# Connect to the floor node
