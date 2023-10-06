@@ -13,21 +13,22 @@ var path_calc_class = load("res://path calc final.gd")
 var path_operator: projectile_path_calc = null
 var intended_position: Vector2
 var time: float = 0
+var parent_node: Node2D
 
 func handle_hit_floor():
 	path_operator = null
-	if position.y < 100:
-		position.y = 65
+	if position.y + parent_node.position.y < 100:
+		position.y = 65 - parent_node.position.y
 	else:
-		position.y = 585
+		position.y = 585 - parent_node.position.y
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player_state = flight_states.idle 
 	line = $Line2D
-	position = Vector2(100, 500)
 	intended_position = position
+	parent_node = get_parent()
 	
 	# Connect to the floor node
 	var floor_node: Node2D = get_tree().root.get_child(-1).get_child(-1)
@@ -44,8 +45,8 @@ func _process(delta):
 		flight_states.pulling:
 			if Input.is_action_pressed("left_click"):
 				line.visible = true
-				var mouse_position = get_global_mouse_position()
-				var line_end_pos: Vector2 = Vector2(mouse_position[0] - position.x, mouse_position[1] - position.y)
+				var mouse_position: Vector2 = get_local_mouse_position()
+				var line_end_pos: Vector2 = mouse_position
 				line.points[1] = line_end_pos
 			elif Input.is_action_just_released("left_click"):
 				var speed: float = sqrt(pow(line.points[1][0], 2) + pow(line.points[1][1], 2))
