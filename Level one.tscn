@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://m4f4i3y1hr1q"]
+[gd_scene load_steps=8 format=3 uid="uid://m4f4i3y1hr1q"]
 
 [ext_resource type="PackedScene" uid="uid://co3ao3r47f5sn" path="res://throwing_the_character.tscn" id="1_xaafr"]
 [ext_resource type="PackedScene" uid="uid://dadojlmubj5n3" path="res://spike.tscn" id="2_dimhv"]
 [ext_resource type="PackedScene" uid="uid://cg4xer6ftqrrp" path="res://laser.tscn" id="3_f346c"]
 [ext_resource type="Script" path="res://world border.gd" id="4_mrvsx"]
+[ext_resource type="PackedScene" uid="uid://diqam5qqbdj4b" path="res://level_goal.tscn" id="5_j0d5r"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vwr0k"]
 normal = Vector2(0, -10)
@@ -16,6 +17,10 @@ distance = 0.2
 
 [node name="Main character" parent="." instance=ExtResource("1_xaafr")]
 position = Vector2(151, 570)
+
+[node name="level_goal" parent="." instance=ExtResource("5_j0d5r")]
+position = Vector2(2688, 330)
+scale = Vector2(4, 4)
 
 [node name="Spikes" type="Node2D" parent="."]
 
@@ -52,7 +57,7 @@ scale = Vector2(0.2, 0.2)
 [node name="lasers" type="Node2D" parent="."]
 
 [node name="laser" parent="lasers" instance=ExtResource("3_f346c")]
-position = Vector2(602, 306)
+position = Vector2(1482, 313)
 scale = Vector2(1, 3)
 laser_movement = 50
 
