@@ -49,17 +49,19 @@ func _process(delta):
 			pass
 		flight_states.pulling:
 			if Input.is_action_pressed("left_click"):
-				line.visible = true
-				var mouse_position: Vector2 = get_local_mouse_position()
-				var line_end_pos: Vector2 = mouse_position
-				line.points[1] = line_end_pos
+				if path_operator == null:
+					line.visible = true
+					var mouse_position: Vector2 = get_local_mouse_position()
+					var line_end_pos: Vector2 = mouse_position
+					line.points[1] = line_end_pos
 			elif Input.is_action_just_released("left_click"):
-				var speed: float = sqrt(pow(line.points[1][0], 2) + pow(line.points[1][1], 2)) / (speed_modifier * line_damping)
-				var angle: float = atan(line.points[1][1]/line.points[1][0])
-				if line.points[1][0] > 0:
-					angle += PI
-				time = 0
-				path_operator = path_calc_class.new(speed, angle, position.x, position.y)
+				if path_operator == null:
+					var speed: float = sqrt(pow(line.points[1][0], 2) + pow(line.points[1][1], 2)) / (speed_modifier * line_damping)
+					var angle: float = atan(line.points[1][1]/line.points[1][0])
+					if line.points[1][0] > 0:
+						angle += PI
+					time = 0
+					path_operator = path_calc_class.new(speed, angle, position.x, position.y)
 			else:
 				line.visible = false
 				player_state = flight_states.idle
