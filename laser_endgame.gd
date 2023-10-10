@@ -9,5 +9,6 @@ func _on_laser_area_area_entered(area: Node2D):
 	
 # Make the laser move
 func _physics_process(delta):
-	time += delta
-	position.y += laser_movement * cos(time) * delta
+	if laser_movement != 0:
+		time += delta
+		position.y += laser_movement * cos(time) * delta
