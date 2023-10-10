@@ -23,9 +23,9 @@ offset_left = 65.0
 offset_top = 390.0
 offset_right = 450.0
 offset_bottom = 468.0
-text = "Click on the character and drag, 
-then release to launch the character
- over the spike"
+text = "Click on the character and drag 
+backwards, then release to launch 
+the character over the spike"
 horizontal_alignment = 1
 
 [node name="multiple spikes" type="Label" parent="Tutorial labels"]
