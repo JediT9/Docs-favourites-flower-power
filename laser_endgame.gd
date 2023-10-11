@@ -4,9 +4,12 @@ extends Node2D
 @export var laser_movement: int = 0
 var time: float = 0
 
+
+# Called when the character enters the laser
 func _on_laser_area_area_entered(area: Node2D):
 	get_tree().quit()
-	
+
+
 # Make the laser move
 func _physics_process(delta):
 	if laser_movement != 0:
