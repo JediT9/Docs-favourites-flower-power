@@ -42,13 +42,15 @@ func calculate_y_dist(time: float) -> float:
 func calculate_x_dist(time: float) -> float:
 	var x_distance: float = time * initial_x_velocity
 	return x_distance
-	
-	
+
+
+# Calculate and return the y-velocity of the character
 func calculate_y_velocity(time: float) -> float:
 	var speed: float = initial_y_velocity + Y_ACCELERATION * time
 	return speed
-	
 
+
+# Return the character's velocities
 func calc_velocities(time: float) -> Vector2:
 	return Vector2(initial_x_velocity, calculate_y_velocity(time))
 
