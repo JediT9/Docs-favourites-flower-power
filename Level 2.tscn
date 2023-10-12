@@ -25,7 +25,26 @@ scale = Vector2(4, 4)
 [node name="Spikes" type="Node2D" parent="."]
 
 [node name="spike" parent="Spikes" instance=ExtResource("3_kjw48")]
-position = Vector2(-813, 524)
+position = Vector2(2308, 127)
+rotation = -3.14159
+
+[node name="spike2" parent="Spikes" instance=ExtResource("3_kjw48")]
+position = Vector2(2102, 342)
+scale = Vector2(0.3, 0.3)
+
+[node name="spike3" parent="Spikes" instance=ExtResource("3_kjw48")]
+position = Vector2(2102, 443)
+rotation = 3.14159
+scale = Vector2(0.3, 0.3)
+
+[node name="spike4" parent="Spikes" instance=ExtResource("3_kjw48")]
+position = Vector2(2430, 414)
+scale = Vector2(0.3, 0.3)
+
+[node name="spike5" parent="Spikes" instance=ExtResource("3_kjw48")]
+position = Vector2(2430, 515)
+rotation = 3.14159
+scale = Vector2(0.3, 0.3)
 
 [node name="lasers" type="Node2D" parent="."]
 
@@ -33,19 +52,34 @@ position = Vector2(-813, 524)
 position = Vector2(431, 524)
 laser_movement = 55
 
+[node name="laser" parent="lasers/laser" instance=ExtResource("4_kibr6")]
+position = Vector2(222, -291)
+laser_movement = 60
+
 [node name="back laser" parent="lasers" instance=ExtResource("4_kibr6")]
 position = Vector2(-998, 327)
 scale = Vector2(5.5, 5.5)
 
 [node name="laser2" parent="lasers" instance=ExtResource("4_kibr6")]
-position = Vector2(586, 202)
+position = Vector2(902, 297)
 rotation = 6.28319
+scale = Vector2(1.75, 1.75)
 laser_movement = 100
 
 [node name="laser3" parent="lasers" instance=ExtResource("4_kibr6")]
-position = Vector2(769, 442)
-rotation = -5.09636
+position = Vector2(1584, 456)
+rotation = -1.5708
+scale = Vector2(5, 5)
 laser_movement = 70
+
+[node name="laser4" parent="lasers" instance=ExtResource("4_kibr6")]
+position = Vector2(507, 28)
+rotation = -1.5708
+scale = Vector2(5, 5)
+
+[node name="laser5" parent="lasers" instance=ExtResource("4_kibr6")]
+position = Vector2(1597, 123)
+scale = Vector2(2, 2)
 
 [node name="world border" type="Node2D" parent="."]
 position = Vector2(0, 653)
@@ -59,6 +93,10 @@ shape = SubResource("WorldBoundaryShape2D_axbyc")
 [node name="Area2D2" type="Area2D" parent="world border"]
 
 [node name="World collision shape" type="CollisionShape2D" parent="world border/Area2D2"]
+position = Vector2(0, -658)
+shape = SubResource("WorldBoundaryShape2D_cm3o4")
+
+[node name="World collision shape" type="CollisionShape2D" parent="world border/Area2D2/World collision shape"]
 position = Vector2(0, -658)
 shape = SubResource("WorldBoundaryShape2D_cm3o4")
 
