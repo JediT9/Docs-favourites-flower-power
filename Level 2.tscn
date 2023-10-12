@@ -19,18 +19,33 @@ distance = 0.2
 position = Vector2(155, 586)
 
 [node name="level_goal" parent="." instance=ExtResource("2_d3kbn")]
-position = Vector2(2688, 330)
+position = Vector2(2856, 330)
 scale = Vector2(4, 4)
 
 [node name="Spikes" type="Node2D" parent="."]
 
 [node name="spike" parent="Spikes" instance=ExtResource("3_kjw48")]
-position = Vector2(822, 474)
+position = Vector2(-813, 524)
 
 [node name="lasers" type="Node2D" parent="."]
 
 [node name="laser" parent="lasers" instance=ExtResource("4_kibr6")]
-position = Vector2(500, 200)
+position = Vector2(431, 524)
+laser_movement = 55
+
+[node name="back laser" parent="lasers" instance=ExtResource("4_kibr6")]
+position = Vector2(-998, 327)
+scale = Vector2(5.5, 5.5)
+
+[node name="laser2" parent="lasers" instance=ExtResource("4_kibr6")]
+position = Vector2(586, 202)
+rotation = 6.28319
+laser_movement = 100
+
+[node name="laser3" parent="lasers" instance=ExtResource("4_kibr6")]
+position = Vector2(769, 442)
+rotation = -5.09636
+laser_movement = 70
 
 [node name="world border" type="Node2D" parent="."]
 position = Vector2(0, 653)
