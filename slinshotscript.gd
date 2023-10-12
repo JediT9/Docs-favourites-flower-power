@@ -5,7 +5,6 @@ enum flight_states {
 	idle,
 	pulling,
 	flying,
-	reset,
 }  # define the different states the character can be in
 
 # Define/initialise variables
@@ -24,7 +23,7 @@ const line_damping: float = 0.5
 
 
 # Called when the character hits the floor, teleports the character back inside the boundaries
-func handle_hit_floor():
+func handle_hit_floor() -> void:
 	player_state = flight_states.idle  # Reset the movement calculator
 
 	# Check whether to teleport the sprite to the top or bottom
@@ -35,7 +34,7 @@ func handle_hit_floor():
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready() -> void:
 	# Initialize variables
 	player_state = flight_states.idle
 	line = $Line2D
@@ -52,7 +51,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(delta) -> void:
 	# Update the time
 	time += delta * speed_modifier
 
@@ -95,6 +94,6 @@ func _process(delta):
 
 
 # Called when the player clicks on the character's hit box
-func _on_area_2d_input_event(viewport, event, shape_idx):
+func _on_area_2d_input_event(_viewport, _event, _shape_idx) -> void:
 	if player_state != flight_states.flying:
 		player_state = flight_states.pulling
