@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://brk4he6u5jr3e"]
+[gd_scene load_steps=6 format=3 uid="uid://brk4he6u5jr3e"]
 
 [ext_resource type="Texture2D" uid="uid://bd4g2i3r7dv8h" path="res://start screen with levels.png" id="1_an108"]
 [ext_resource type="Script" path="res://Landing sprite.gd" id="2_0fb6g"]
@@ -7,6 +7,9 @@
 size = Vector2(228, 94.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bbjtw"]
+size = Vector2(129, 140)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_shogy"]
 size = Vector2(129, 140)
 
 [node name="Landing page" type="Node2D"]
@@ -26,3 +29,29 @@ shape = SubResource("RectangleShape2D_kocqw")
 [node name="Level 1 button collision" type="CollisionShape2D" parent="Landing sprite/Level 1 button"]
 position = Vector2(-310.5, 323)
 shape = SubResource("RectangleShape2D_bbjtw")
+
+[node name="Level 2 button" type="Area2D" parent="Landing sprite"]
+
+[node name="Level 2 button collision" type="CollisionShape2D" parent="Landing sprite/Level 2 button"]
+position = Vector2(-89, 154)
+shape = SubResource("RectangleShape2D_shogy")
+
+[node name="Level 3 button" type="Area2D" parent="Landing sprite"]
+
+[node name="Level 3 button collision" type="CollisionShape2D" parent="Landing sprite/Level 3 button"]
+position = Vector2(73, -162)
+shape = SubResource("RectangleShape2D_shogy")
+
+[node name="Level 4 button" type="Area2D" parent="Landing sprite"]
+
+[node name="Level 4 button collision" type="CollisionShape2D" parent="Landing sprite/Level 4 button"]
+position = Vector2(243, 213)
+shape = SubResource("RectangleShape2D_shogy")
+
+[node name="Level 5 button" type="Area2D" parent="Landing sprite"]
+
+[node name="Level 5 button collision" type="CollisionShape2D" parent="Landing sprite/Level 5 button"]
+position = Vector2(462, 319)
+shape = SubResource("RectangleShape2D_shogy")
+
+[connection signal="input_event" from="Landing sprite/Tutorial button" to="Landing sprite" method="_on_tutorial_button_input_event"]

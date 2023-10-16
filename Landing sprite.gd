@@ -12,3 +12,8 @@ func _ready():
 	scale.x = (DisplayServer.window_get_size()[0]) / image_width
 	scale.y = (DisplayServer.window_get_size()[1]) / image_height
 	
+
+
+func _on_tutorial_button_input_event(viewport, event, shape_idx):
+	if Input.is_action_just_pressed("left_click"):
+		pass   # Change level
