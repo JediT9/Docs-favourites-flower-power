@@ -55,3 +55,8 @@ position = Vector2(462, 319)
 shape = SubResource("RectangleShape2D_shogy")
 
 [connection signal="input_event" from="Landing sprite/Tutorial button" to="Landing sprite" method="_on_tutorial_button_input_event"]
+[connection signal="input_event" from="Landing sprite/Level 1 button" to="Landing sprite" method="_on_level_1_button_input_event"]
+[connection signal="input_event" from="Landing sprite/Level 2 button" to="Landing sprite" method="_on_level_2_button_input_event"]
+[connection signal="input_event" from="Landing sprite/Level 3 button" to="Landing sprite" method="_on_level_3_button_input_event"]
+[connection signal="input_event" from="Landing sprite/Level 4 button" to="Landing sprite" method="_on_level_4_button_input_event"]
+[connection signal="input_event" from="Landing sprite/Level 5 button" to="Landing sprite" method="_on_level_5_button_input_event"]
