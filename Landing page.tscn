@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://brk4he6u5jr3e"]
+
+[ext_resource type="Texture2D" uid="uid://bd4g2i3r7dv8h" path="res://start screen with levels.png" id="1_an108"]
+[ext_resource type="Script" path="res://Landing sprite.gd" id="2_0fb6g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kocqw"]
+size = Vector2(228, 94.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bbjtw"]
+size = Vector2(129, 140)
+
+[node name="Landing page" type="Node2D"]
+
+[node name="Landing sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_an108")
+script = ExtResource("2_0fb6g")
+
+[node name="Tutorial button" type="Area2D" parent="Landing sprite"]
+
+[node name="Tutorial button collision" type="CollisionShape2D" parent="Landing sprite/Tutorial button"]
+position = Vector2(-408, 73.5)
+shape = SubResource("RectangleShape2D_kocqw")
+
+[node name="Level 1 button" type="Area2D" parent="Landing sprite"]
+
+[node name="Level 1 button collision" type="CollisionShape2D" parent="Landing sprite/Level 1 button"]
+position = Vector2(-310.5, 323)
+shape = SubResource("RectangleShape2D_bbjtw")
