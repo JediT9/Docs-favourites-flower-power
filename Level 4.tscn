@@ -19,18 +19,122 @@ distance = 0.2
 position = Vector2(155, 586)
 
 [node name="level_goal" parent="." instance=ExtResource("2_2aygb")]
-position = Vector2(2688, 330)
+position = Vector2(3321, 330)
 scale = Vector2(4, 4)
 
 [node name="Spikes" type="Node2D" parent="."]
 
 [node name="spike" parent="Spikes" instance=ExtResource("3_jl5qu")]
-position = Vector2(822, 474)
+position = Vector2(490, 529)
+
+[node name="spike2" parent="Spikes" instance=ExtResource("3_jl5qu")]
+position = Vector2(1338, 531)
+
+[node name="spike3" parent="Spikes" instance=ExtResource("3_jl5qu")]
+position = Vector2(2100, 614)
+scale = Vector2(0.2, 0.2)
+
+[node name="spike4" parent="Spikes" instance=ExtResource("3_jl5qu")]
+position = Vector2(2184, 614)
+scale = Vector2(0.2, 0.2)
+
+[node name="spike5" parent="Spikes" instance=ExtResource("3_jl5qu")]
+position = Vector2(2267, 614)
+scale = Vector2(0.2, 0.2)
+
+[node name="spike6" parent="Spikes" instance=ExtResource("3_jl5qu")]
+position = Vector2(2352, 614)
+scale = Vector2(0.2, 0.2)
+
+[node name="spike7" parent="Spikes" instance=ExtResource("3_jl5qu")]
+position = Vector2(2436, 614)
+scale = Vector2(0.2, 0.2)
+
+[node name="spike8" parent="Spikes" instance=ExtResource("3_jl5qu")]
+position = Vector2(2715, 616)
+scale = Vector2(0.2, 0.2)
+
+[node name="spike9" parent="Spikes" instance=ExtResource("3_jl5qu")]
+position = Vector2(2799, 616)
+scale = Vector2(0.2, 0.2)
+
+[node name="spike10" parent="Spikes" instance=ExtResource("3_jl5qu")]
+position = Vector2(2882, 616)
+scale = Vector2(0.2, 0.2)
+
+[node name="spike11" parent="Spikes" instance=ExtResource("3_jl5qu")]
+position = Vector2(2967, 616)
+scale = Vector2(0.2, 0.2)
+
+[node name="spike12" parent="Spikes" instance=ExtResource("3_jl5qu")]
+position = Vector2(3051, 616)
+scale = Vector2(0.2, 0.2)
 
 [node name="lasers" type="Node2D" parent="."]
 
 [node name="laser" parent="lasers" instance=ExtResource("4_nerj2")]
-position = Vector2(500, 200)
+position = Vector2(-964, 328)
+scale = Vector2(5.5, 5.5)
+
+[node name="laser2" parent="lasers" instance=ExtResource("4_nerj2")]
+position = Vector2(507, 29)
+rotation = -1.5708
+scale = Vector2(4, 4)
+
+[node name="laser3" parent="lasers" instance=ExtResource("4_nerj2")]
+position = Vector2(502, 232)
+rotation = -6.28319
+laser_movement = 50
+
+[node name="laser3" parent="lasers/laser3" instance=ExtResource("4_nerj2")]
+position = Vector2(467, 84.0001)
+rotation = -6.28319
+laser_movement = 50
+
+[node name="laser3" parent="lasers/laser3/laser3" instance=ExtResource("4_nerj2")]
+position = Vector2(103, 9.00005)
+rotation = -6.28319
+laser_movement = 50
+
+[node name="laser3" parent="lasers/laser3/laser3/laser3" instance=ExtResource("4_nerj2")]
+position = Vector2(112, -4)
+rotation = -6.28319
+laser_movement = 50
+
+[node name="laser4" parent="lasers/laser3" instance=ExtResource("4_nerj2")]
+position = Vector2(37, 1)
+rotation = -6.28319
+laser_movement = 50
+
+[node name="laser5" parent="lasers/laser3" instance=ExtResource("4_nerj2")]
+position = Vector2(-37, 0.999985)
+rotation = -6.28319
+laser_movement = 50
+
+[node name="laser4" parent="lasers" instance=ExtResource("4_nerj2")]
+position = Vector2(977, 29)
+rotation = -1.5708
+scale = Vector2(4, 4)
+
+[node name="laser5" parent="lasers" instance=ExtResource("4_nerj2")]
+position = Vector2(1450, 29)
+rotation = -1.5708
+scale = Vector2(4, 4)
+
+[node name="laser6" parent="lasers" instance=ExtResource("4_nerj2")]
+position = Vector2(1919, 29)
+rotation = -1.5708
+scale = Vector2(4, 4)
+
+[node name="laser7" parent="lasers" instance=ExtResource("4_nerj2")]
+position = Vector2(2389, 29)
+rotation = -1.5708
+scale = Vector2(4, 4)
+
+[node name="laser8" parent="lasers" instance=ExtResource("4_nerj2")]
+position = Vector2(2862, 29)
+rotation = -1.5708
+scale = Vector2(4, 4)
 
 [node name="world border" type="Node2D" parent="."]
 position = Vector2(0, 653)
