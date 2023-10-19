@@ -35,6 +35,37 @@ scale = Vector2(0.3, 1)
 position = Vector2(3164, 476)
 scale = Vector2(0.3, 1)
 
+[node name="spike4" parent="Spikes" instance=ExtResource("3_pa027")]
+position = Vector2(4250, 524)
+
+[node name="spike5" parent="Spikes" instance=ExtResource("3_pa027")]
+position = Vector2(5212, 586)
+scale = Vector2(0.3, 0.2)
+
+[node name="spike6" parent="Spikes" instance=ExtResource("3_pa027")]
+position = Vector2(5348, 586)
+scale = Vector2(0.3, 0.2)
+
+[node name="spike7" parent="Spikes" instance=ExtResource("3_pa027")]
+position = Vector2(5484, 586)
+scale = Vector2(0.3, 0.2)
+
+[node name="spike8" parent="Spikes" instance=ExtResource("3_pa027")]
+position = Vector2(5622, 586)
+scale = Vector2(0.3, 0.2)
+
+[node name="spike9" parent="Spikes" instance=ExtResource("3_pa027")]
+position = Vector2(5757, 586)
+scale = Vector2(0.3, 0.2)
+
+[node name="spike10" parent="Spikes" instance=ExtResource("3_pa027")]
+position = Vector2(5909, 586)
+scale = Vector2(0.3, 0.2)
+
+[node name="spike11" parent="Spikes" instance=ExtResource("3_pa027")]
+position = Vector2(6037, 586)
+scale = Vector2(0.3, 0.2)
+
 [node name="lasers" type="Node2D" parent="."]
 
 [node name="laser2" parent="lasers" instance=ExtResource("4_f582i")]
@@ -69,6 +100,20 @@ laser_movement = 50
 position = Vector2(2698, 34)
 rotation = -1.5708
 scale = Vector2(4, 58)
+
+[node name="laser6" parent="lasers" instance=ExtResource("4_f582i")]
+position = Vector2(4256, 201)
+rotation = -1.5708
+scale = Vector2(4, 4)
+laser_movement = 30
+
+[node name="laser3" parent="lasers/laser6" instance=ExtResource("4_f582i")]
+position = Vector2(-9.74957, -117.5)
+laser_movement = 30
+
+[node name="laser7" parent="lasers/laser6" instance=ExtResource("4_f582i")]
+position = Vector2(-9.50043, 118.25)
+laser_movement = 30
 
 [node name="world border" type="Node2D" parent="."]
 position = Vector2(-157, 653)
