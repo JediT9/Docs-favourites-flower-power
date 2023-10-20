@@ -12,6 +12,7 @@ radius = 60.0
 [node name="character_throw" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+collision_layer = 3
 script = ExtResource("1_fj6qc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]

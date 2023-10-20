@@ -96,9 +96,5 @@ shape = SubResource("WorldBoundaryShape2D_axbyc")
 position = Vector2(0, -658)
 shape = SubResource("WorldBoundaryShape2D_cm3o4")
 
-[node name="World collision shape" type="CollisionShape2D" parent="world border/Area2D2/World collision shape"]
-position = Vector2(0, -658)
-shape = SubResource("WorldBoundaryShape2D_cm3o4")
-
 [connection signal="area_entered" from="world border/Area2D" to="world border" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="world border/Area2D2" to="world border" method="_on_area_2d_area_entered"]
