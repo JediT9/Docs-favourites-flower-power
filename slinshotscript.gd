@@ -17,11 +17,12 @@ var time: float = 0
 var parent_node: Node2D
 var camera: Camera2D
 var camera_offset: float = 250
+var line_angle: float
 
 # Define constants
 const SPEED_MODIFIER: int = 5
 const LINE_DAMPING: float = 0.25
-const MAX_LINE_COLOUR = 200
+const MAX_LINE_LENGTH = 200
 
 
 # Called when the character hits the floor, teleports the character back inside the boundaries
@@ -76,12 +77,20 @@ func _process(delta) -> void:
 				var line_end_pos: Vector2 = mouse_position
 				# Calculate the line length
 				var line_length: float = sqrt(pow(line_end_pos[0], 2) + pow(line_end_pos[1], 2))
-				if line_length > MAX_LINE_COLOUR:
-					line_length = MAX_LINE_COLOUR
-				var red_value: float = line_length / MAX_LINE_COLOUR
-				var blue_value: float = ((-1 * line_length) / MAX_LINE_COLOUR) + 1
-				line.modulate = Color(red_value, 0, blue_value, 1)
-				line.points[1] = line_end_pos
+				line_angle = atan(line_end_pos[1] / line_end_pos[0])
+				if line_end_pos[0] > 0:
+					line_angle += PI
+				# Set the line length
+				if line_length > MAX_LINE_LENGTH:
+					# Cap the length of the line
+					var x_pos: float = -1 * cos(line_angle) * MAX_LINE_LENGTH
+					var y_pos: float = -1 * sin(line_angle) * MAX_LINE_LENGTH
+					line.points[1] = Vector2(x_pos, y_pos)
+				else:
+					line.points[1] = line_end_pos
+				# Squish the character based on the launch speed
+				$Character_sprite.scale.y = (line_length) / (2 * MAX_LINE_LENGTH)
+				
 			elif Input.is_action_just_released("left_click"):
 				# Launch the character
 				# Calculate speed and angle from the line length
@@ -89,12 +98,12 @@ func _process(delta) -> void:
 					sqrt(pow(line.points[1][0], 2) + pow(line.points[1][1], 2))
 					/ (SPEED_MODIFIER * LINE_DAMPING)
 				)
-				var angle: float = atan(line.points[1][1] / line.points[1][0])
+				line_angle = atan(line.points[1][1] / line.points[1][0])
 				if line.points[1][0] > 0:
-					angle += PI
+					line_angle += PI
 				time = 0
 				# Create the path calculator object and update the player state
-				path_operator = path_calc_class.new(speed, angle, position.x, position.y)
+				path_operator = path_calc_class.new(speed, line_angle, position.x, position.y)
 				player_state = flight_states.flying
 				line.visible = false
 		flight_states.flying:
