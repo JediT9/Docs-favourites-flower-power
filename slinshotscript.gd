@@ -16,10 +16,12 @@ var intended_position: Vector2
 var time: float = 0
 var parent_node: Node2D
 var camera: Camera2D
+var camera_offset: float = 250
 
 # Define constants
-const speed_modifier: int = 5
-const line_damping: float = 0.5
+const SPEED_MODIFIER: int = 5
+const LINE_DAMPING: float = 0.25
+const MAX_LINE_COLOUR = 200
 
 
 # Called when the character hits the floor, teleports the character back inside the boundaries
@@ -41,6 +43,10 @@ func _ready() -> void:
 	intended_position = position
 	parent_node = get_parent()
 	camera = parent_node.get_node("Camera2D")
+	
+	# Check the camera offset isn't larger than the screen size
+	if camera_offset - 25 > (DisplayServer.window_get_size()[0] / 2):
+		camera_offset = DisplayServer.window_get_size()[0] / 2
 
 	# Set the camera position
 	camera.position.y = (DisplayServer.window_get_size()[1] / 2.0) - parent_node.position.y
@@ -53,7 +59,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta) -> void:
 	# Update the time
-	time += delta * speed_modifier
+	time += delta * SPEED_MODIFIER
 
 	# Identify which state the player is in
 	match player_state:
@@ -68,13 +74,20 @@ func _process(delta) -> void:
 				line.visible = true
 				var mouse_position: Vector2 = get_local_mouse_position()
 				var line_end_pos: Vector2 = mouse_position
+				# Calculate the line length
+				var line_length: float = sqrt(pow(line_end_pos[0], 2) + pow(line_end_pos[1], 2))
+				if line_length > MAX_LINE_COLOUR:
+					line_length = MAX_LINE_COLOUR
+				var red_value: float = line_length / MAX_LINE_COLOUR
+				var blue_value: float = ((-1 * line_length) / MAX_LINE_COLOUR) + 1
+				line.modulate = Color(red_value, 0, blue_value, 1)
 				line.points[1] = line_end_pos
 			elif Input.is_action_just_released("left_click"):
 				# Launch the character
 				# Calculate speed and angle from the line length
 				var speed: float = (
 					sqrt(pow(line.points[1][0], 2) + pow(line.points[1][1], 2))
-					/ (speed_modifier * line_damping)
+					/ (SPEED_MODIFIER * LINE_DAMPING)
 				)
 				var angle: float = atan(line.points[1][1] / line.points[1][0])
 				if line.points[1][0] > 0:
@@ -86,11 +99,11 @@ func _process(delta) -> void:
 				line.visible = false
 		flight_states.flying:
 			# Make the character move
-			velocity = path_operator.calc_velocities(time) * speed_modifier
+			velocity = path_operator.calc_velocities(time) * SPEED_MODIFIER
 			move_and_slide()
 
 	# Move the camera
-	camera.position.x = position.x
+	camera.position.x = position.x + camera_offset
 
 
 # Called when the player clicks on the character's hit box

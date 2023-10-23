@@ -1,0 +1,100 @@
+[gd_scene load_steps=7 format=3 uid="uid://cw52xji3wnekq"]
+
+[ext_resource type="Script" path="res://Starting area.gd" id="1_7lbny"]
+[ext_resource type="PackedScene" uid="uid://co3ao3r47f5sn" path="res://throwing_the_character.tscn" id="1_nlcq8"]
+[ext_resource type="Script" path="res://world border.gd" id="2_oicrv"]
+[ext_resource type="PackedScene" uid="uid://dadojlmubj5n3" path="res://spike.tscn" id="3_p3y44"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jaqyy"]
+normal = Vector2(0, -10)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xrx7b"]
+normal = Vector2(0, 10)
+distance = 0.2
+
+[node name="Starting area" type="Node2D"]
+script = ExtResource("1_7lbny")
+
+[node name="Labels" type="Node2D" parent="."]
+
+[node name="Advance instructions" type="Label" parent="Labels"]
+offset_left = 302.0
+offset_top = 47.0
+offset_right = 672.0
+offset_bottom = 99.0
+text = "Use this area to get familiar with the movement 
+of the character, then hit enter when you're 
+ready to advance"
+horizontal_alignment = 1
+
+[node name="First spike" type="Label" parent="Labels"]
+offset_left = 320.0
+offset_top = 424.0
+offset_right = 705.0
+offset_bottom = 502.0
+text = "Click on the character and drag 
+backwards, then release to launch 
+the character over the spike"
+horizontal_alignment = 1
+
+[node name="Advance instructions2" type="Label" parent="Labels"]
+offset_left = 756.0
+offset_top = 506.0
+offset_right = 1126.0
+offset_bottom = 584.0
+text = "The spikes can't hurt you, so 
+practice getting the jumps right"
+horizontal_alignment = 1
+
+[node name="character_throw" parent="." instance=ExtResource("1_nlcq8")]
+position = Vector2(487, 587)
+
+[node name="Spikes" type="Node2D" parent="."]
+
+[node name="spike" parent="Spikes" instance=ExtResource("3_p3y44")]
+position = Vector2(757, 616)
+scale = Vector2(0.2, 0.2)
+
+[node name="spike2" parent="Spikes" instance=ExtResource("3_p3y44")]
+position = Vector2(1160, 599)
+scale = Vector2(0.3, 0.3)
+
+[node name="spike3" parent="Spikes" instance=ExtResource("3_p3y44")]
+position = Vector2(1668, 570)
+scale = Vector2(0.5, 0.5)
+
+[node name="spike4" parent="Spikes" instance=ExtResource("3_p3y44")]
+position = Vector2(2218, 594)
+scale = Vector2(0.3, 0.3)
+
+[node name="spike5" parent="Spikes" instance=ExtResource("3_p3y44")]
+position = Vector2(2343, 594)
+scale = Vector2(0.3, 0.3)
+
+[node name="spike6" parent="Spikes" instance=ExtResource("3_p3y44")]
+position = Vector2(2467, 594)
+scale = Vector2(0.3, 0.3)
+
+[node name="spike7" parent="Spikes" instance=ExtResource("3_p3y44")]
+position = Vector2(2591, 594)
+scale = Vector2(0.3, 0.3)
+
+[node name="world border" type="Node2D" parent="."]
+position = Vector2(0, 653)
+script = ExtResource("2_oicrv")
+
+[node name="Area2D" type="Area2D" parent="world border"]
+collision_mask = 7
+
+[node name="World collision shape" type="CollisionShape2D" parent="world border/Area2D"]
+shape = SubResource("WorldBoundaryShape2D_jaqyy")
+
+[node name="Area2D2" type="Area2D" parent="world border"]
+collision_mask = 7
+
+[node name="World collision shape" type="CollisionShape2D" parent="world border/Area2D2"]
+position = Vector2(0, -670)
+shape = SubResource("WorldBoundaryShape2D_xrx7b")
+
+[connection signal="area_entered" from="world border/Area2D" to="world border" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="world border/Area2D2" to="world border" method="_on_area_2d_area_entered"]

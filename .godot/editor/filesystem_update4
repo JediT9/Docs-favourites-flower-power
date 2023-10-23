@@ -1,5 +1,7 @@
 res://Tutorial level.tscn
+res://laser_endgame.gd
 res://player.gd
+res://slinshotscript.gd
 res://spike.tscn
 res://throwing_the_character.tscn
 res://laser.tscn
@@ -8,4 +10,8 @@ res://Level 2.tscn
 res://Landing page.tscn
 res://Victory page.tscn
 res://Death page.tscn
-res://laser_endgame.gd
+res://Level 5.tscn
+res://Level 3.tscn
+res://Level 4.tscn
+res://Starting area.tscn
+res://Starting area.gd

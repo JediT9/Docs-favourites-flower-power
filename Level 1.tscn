@@ -85,11 +85,13 @@ position = Vector2(0, 653)
 script = ExtResource("5_q8tvg")
 
 [node name="Area2D" type="Area2D" parent="world border"]
+collision_mask = 7
 
 [node name="World collision shape" type="CollisionShape2D" parent="world border/Area2D"]
 shape = SubResource("WorldBoundaryShape2D_ub4ks")
 
 [node name="Area2D2" type="Area2D" parent="world border"]
+collision_mask = 7
 
 [node name="World collision shape" type="CollisionShape2D" parent="world border/Area2D2"]
 position = Vector2(0, -670)
