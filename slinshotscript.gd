@@ -75,6 +75,9 @@ func _process(delta) -> void:
 				line.visible = true
 				var mouse_position: Vector2 = get_local_mouse_position()
 				var line_end_pos: Vector2 = mouse_position
+				# Check the line doesn't have an x-size of zero
+				if line_end_pos[0] == 0:
+					line_end_pos[0] = 0.00001
 				# Calculate the line length
 				var line_length: float = sqrt(pow(line_end_pos[0], 2) + pow(line_end_pos[1], 2))
 				line_angle = atan(line_end_pos[1] / line_end_pos[0])
@@ -83,16 +86,18 @@ func _process(delta) -> void:
 				# Set the line length
 				if line_length > MAX_LINE_LENGTH:
 					# Cap the length of the line
+					line_length = MAX_LINE_LENGTH
 					var x_pos: float = -1 * cos(line_angle) * MAX_LINE_LENGTH
 					var y_pos: float = -1 * sin(line_angle) * MAX_LINE_LENGTH
 					line.points[1] = Vector2(x_pos, y_pos)
 				else:
 					line.points[1] = line_end_pos
 				# Squish the character based on the launch speed
-				$Character_sprite.scale.y = (line_length) / (2 * MAX_LINE_LENGTH)
+				$Character_sprite.scale.y = 1 - (line_length / (MAX_LINE_LENGTH * 2))
 				
 			elif Input.is_action_just_released("left_click"):
 				# Launch the character
+				$Character_sprite.scale.y = 1
 				# Calculate speed and angle from the line length
 				var speed: float = (
 					sqrt(pow(line.points[1][0], 2) + pow(line.points[1][1], 2))
@@ -117,5 +122,7 @@ func _process(delta) -> void:
 
 # Called when the player clicks on the character's hit box
 func _on_area_2d_input_event(_viewport, _event, _shape_idx) -> void:
-	if player_state != flight_states.flying:
-		player_state = flight_states.pulling
+	print(get_local_mouse_position())
+	if Input.is_action_just_pressed("left_click"):
+		if player_state != flight_states.flying:
+			player_state = flight_states.pulling

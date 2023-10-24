@@ -19,7 +19,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	
 	# Check if the user pressed enter, if so change to landing page
 	if Input.is_action_just_released("enter"):

@@ -118,8 +118,6 @@ laser_movement = 30
 [node name="laser5" parent="." instance=ExtResource("4_f582i")]
 position = Vector2(-925, 322)
 scale = Vector2(5, 5)
-is_timer = true
-level_time = 60
 
 [node name="world border" type="Node2D" parent="."]
 position = Vector2(0, 653)
