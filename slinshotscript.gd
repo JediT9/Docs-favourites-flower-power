@@ -21,7 +21,7 @@ var line_angle: float
 
 # Define constants
 const SPEED_MODIFIER: int = 5
-const LINE_DAMPING: float = 0.25
+const LINE_DAMPING: float = 0.02
 const MAX_LINE_LENGTH = 200
 
 
@@ -44,7 +44,7 @@ func _ready() -> void:
 	intended_position = position
 	parent_node = get_parent()
 	camera = parent_node.get_node("Camera2D")
-	
+
 	# Check the camera offset isn't larger than the screen size
 	if camera_offset - 25 > (DisplayServer.window_get_size()[0] / 2):
 		camera_offset = DisplayServer.window_get_size()[0] / 2
@@ -94,13 +94,13 @@ func _process(delta) -> void:
 					line.points[1] = line_end_pos
 				# Squish the character based on the launch speed
 				$Character_sprite.scale.y = 1 - (line_length / (MAX_LINE_LENGTH * 2))
-				
+
 			elif Input.is_action_just_released("left_click"):
 				# Launch the character
 				$Character_sprite.scale.y = 1
 				# Calculate speed and angle from the line length
 				var speed: float = (
-					sqrt(pow(line.points[1][0], 2) + pow(line.points[1][1], 2))
+					sqrt(sqrt(pow(line.points[1][0], 2)) + sqrt(pow(line.points[1][1], 2)))
 					/ (SPEED_MODIFIER * LINE_DAMPING)
 				)
 				line_angle = atan(line.points[1][1] / line.points[1][0])
