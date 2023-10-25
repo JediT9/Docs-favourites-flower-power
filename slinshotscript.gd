@@ -16,10 +16,13 @@ var intended_position: Vector2
 var time: float = 0
 var parent_node: Node2D
 var camera: Camera2D
+var camera_offset: float = 250
+var line_angle: float
 
 # Define constants
-const speed_modifier: int = 5
-const line_damping: float = 0.5
+const SPEED_MODIFIER: int = 5
+const LINE_DAMPING: float = 0.25
+const MAX_LINE_LENGTH = 200
 
 
 # Called when the character hits the floor, teleports the character back inside the boundaries
@@ -41,6 +44,10 @@ func _ready() -> void:
 	intended_position = position
 	parent_node = get_parent()
 	camera = parent_node.get_node("Camera2D")
+	
+	# Check the camera offset isn't larger than the screen size
+	if camera_offset - 25 > (DisplayServer.window_get_size()[0] / 2):
+		camera_offset = DisplayServer.window_get_size()[0] / 2
 
 	# Set the camera position
 	camera.position.y = (DisplayServer.window_get_size()[1] / 2.0) - parent_node.position.y
@@ -53,7 +60,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta) -> void:
 	# Update the time
-	time += delta * speed_modifier
+	time += delta * SPEED_MODIFIER
 
 	# Identify which state the player is in
 	match player_state:
@@ -68,32 +75,54 @@ func _process(delta) -> void:
 				line.visible = true
 				var mouse_position: Vector2 = get_local_mouse_position()
 				var line_end_pos: Vector2 = mouse_position
-				line.points[1] = line_end_pos
+				# Check the line doesn't have an x-size of zero
+				if line_end_pos[0] == 0:
+					line_end_pos[0] = 0.00001
+				# Calculate the line length
+				var line_length: float = sqrt(pow(line_end_pos[0], 2) + pow(line_end_pos[1], 2))
+				line_angle = atan(line_end_pos[1] / line_end_pos[0])
+				if line_end_pos[0] > 0:
+					line_angle += PI
+				# Set the line length
+				if line_length > MAX_LINE_LENGTH:
+					# Cap the length of the line
+					line_length = MAX_LINE_LENGTH
+					var x_pos: float = -1 * cos(line_angle) * MAX_LINE_LENGTH
+					var y_pos: float = -1 * sin(line_angle) * MAX_LINE_LENGTH
+					line.points[1] = Vector2(x_pos, y_pos)
+				else:
+					line.points[1] = line_end_pos
+				# Squish the character based on the launch speed
+				$Character_sprite.scale.y = 1 - (line_length / (MAX_LINE_LENGTH * 2))
+				
 			elif Input.is_action_just_released("left_click"):
 				# Launch the character
+				$Character_sprite.scale.y = 1
 				# Calculate speed and angle from the line length
 				var speed: float = (
 					sqrt(pow(line.points[1][0], 2) + pow(line.points[1][1], 2))
-					/ (speed_modifier * line_damping)
+					/ (SPEED_MODIFIER * LINE_DAMPING)
 				)
-				var angle: float = atan(line.points[1][1] / line.points[1][0])
+				line_angle = atan(line.points[1][1] / line.points[1][0])
 				if line.points[1][0] > 0:
-					angle += PI
+					line_angle += PI
 				time = 0
 				# Create the path calculator object and update the player state
-				path_operator = path_calc_class.new(speed, angle, position.x, position.y)
+				path_operator = path_calc_class.new(speed, line_angle, position.x, position.y)
 				player_state = flight_states.flying
 				line.visible = false
 		flight_states.flying:
 			# Make the character move
-			velocity = path_operator.calc_velocities(time) * speed_modifier
+			velocity = path_operator.calc_velocities(time) * SPEED_MODIFIER
 			move_and_slide()
 
 	# Move the camera
-	camera.position.x = position.x
+	camera.position.x = position.x + camera_offset
 
 
 # Called when the player clicks on the character's hit box
 func _on_area_2d_input_event(_viewport, _event, _shape_idx) -> void:
-	if player_state != flight_states.flying:
-		player_state = flight_states.pulling
+	print(get_local_mouse_position())
+	if Input.is_action_just_pressed("left_click"):
+		if player_state != flight_states.flying:
+			player_state = flight_states.pulling

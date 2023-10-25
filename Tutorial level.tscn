@@ -18,48 +18,58 @@ distance = 0.2
 [node name="Tutorial labels" type="Node2D" parent="."]
 position = Vector2(100, 100)
 
-[node name="First spike" type="Label" parent="Tutorial labels"]
-offset_left = 65.0
-offset_top = 390.0
-offset_right = 450.0
-offset_bottom = 468.0
-text = "Click on the character and drag 
-backwards, then release to launch 
-the character over the spike"
-horizontal_alignment = 1
-
 [node name="multiple spikes" type="Label" parent="Tutorial labels"]
-offset_left = 620.0
-offset_top = 407.0
-offset_right = 1005.0
-offset_bottom = 485.0
-text = "Drag back further to travel faster and further,
- to get over larger obstacles"
+offset_left = 610.0
+offset_top = 377.0
+offset_right = 995.0
+offset_bottom = 455.0
+text = "Onw way to get over longer onstacles
+is to use the roof, simply launch upwards
+fast enough and yu will stick"
 horizontal_alignment = 1
 
 [node name="Moving laser" type="Label" parent="Tutorial labels"]
-offset_left = 1193.0
+offset_left = 1407.0
 offset_top = 411.0
-offset_right = 1578.0
+offset_right = 1792.0
 offset_bottom = 489.0
 text = "You can also encounter lasers
 These can move, so you need to time it carefully"
 horizontal_alignment = 1
 
 [node name="Laser spike gap" type="Label" parent="Tutorial labels"]
-offset_left = 1708.0
+offset_left = 2165.0
 offset_top = 328.0
-offset_right = 2093.0
+offset_right = 2550.0
 offset_bottom = 406.0
 text = "You can also encounter combined obstacles,
 so you need to aim carefully"
+horizontal_alignment = 1
+
+[node name="Wrong way" type="Label" parent="Tutorial labels"]
+offset_left = -1095.0
+offset_top = 211.0
+offset_right = -710.0
+offset_bottom = 289.0
+text = "Wrong way lol
+"
+horizontal_alignment = 1
+
+[node name="Spikes hurt" type="Label" parent="Tutorial labels"]
+offset_left = -13.0
+offset_top = 349.0
+offset_right = 372.0
+offset_bottom = 427.0
+text = "Spikes and lasers will kill you now, 
+so be careful with your jumps
+"
 horizontal_alignment = 1
 
 [node name="Main character" parent="." instance=ExtResource("1_nahn2")]
 position = Vector2(155, 586)
 
 [node name="level_goal" parent="." instance=ExtResource("2_jrfax")]
-position = Vector2(2688, 330)
+position = Vector2(3417, 330)
 scale = Vector2(4, 4)
 
 [node name="Spikes" type="Node2D" parent="."]
@@ -67,54 +77,60 @@ scale = Vector2(4, 4)
 [node name="spike" parent="Spikes" instance=ExtResource("3_gtxnh")]
 texture_filter = 1
 texture_repeat = 3
-position = Vector2(351, 616)
-scale = Vector2(0.2, 0.2)
+position = Vector2(260, 631)
+scale = Vector2(0.1, 0.1)
 
 [node name="spike2" parent="Spikes" instance=ExtResource("3_gtxnh")]
 texture_filter = 1
 texture_repeat = 3
-position = Vector2(835, 616)
+position = Vector2(821, 616)
 scale = Vector2(0.2, 0.2)
 
 [node name="spike3" parent="Spikes" instance=ExtResource("3_gtxnh")]
 texture_filter = 1
 texture_repeat = 3
-position = Vector2(917, 616)
+position = Vector2(903, 616)
 scale = Vector2(0.2, 0.2)
 
 [node name="spike4" parent="Spikes" instance=ExtResource("3_gtxnh")]
 texture_filter = 1
 texture_repeat = 3
-position = Vector2(999, 616)
+position = Vector2(985, 616)
 scale = Vector2(0.2, 0.2)
 
 [node name="spike5" parent="Spikes" instance=ExtResource("3_gtxnh")]
 texture_filter = 1
 texture_repeat = 3
-position = Vector2(2000, 616)
+position = Vector2(2457, 616)
 scale = Vector2(0.2, 0.2)
 
 [node name="lasers" type="Node2D" parent="."]
 
 [node name="laser" parent="lasers" instance=ExtResource("4_v3srj")]
-position = Vector2(1482, 313)
+position = Vector2(1696, 313)
 scale = Vector2(1, 3)
 laser_movement = 50
 
 [node name="laser2" parent="lasers" instance=ExtResource("4_v3srj")]
-position = Vector2(2000, 187)
+position = Vector2(2457, 187)
 scale = Vector2(1, 3)
+
+[node name="laser5" parent="lasers" instance=ExtResource("4_v3srj")]
+position = Vector2(-925, 322)
+scale = Vector2(5, 5)
 
 [node name="world border" type="Node2D" parent="."]
 position = Vector2(0, 653)
 script = ExtResource("5_wudc0")
 
 [node name="Area2D" type="Area2D" parent="world border"]
+collision_mask = 7
 
 [node name="World collision shape" type="CollisionShape2D" parent="world border/Area2D"]
 shape = SubResource("WorldBoundaryShape2D_vwr0k")
 
 [node name="Area2D2" type="Area2D" parent="world border"]
+collision_mask = 7
 
 [node name="World collision shape" type="CollisionShape2D" parent="world border/Area2D2"]
 position = Vector2(0, -658)

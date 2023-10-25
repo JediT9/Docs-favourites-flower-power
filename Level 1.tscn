@@ -15,6 +15,8 @@ distance = 0.2
 
 [node name="Level one" type="Node2D"]
 
+[node name="Background" type="Node2D" parent="."]
+
 [node name="Main character" parent="." instance=ExtResource("1_y0o3t")]
 position = Vector2(155, 586)
 
@@ -77,19 +79,19 @@ scale = Vector2(4, 4)
 position = Vector2(-987, 316)
 rotation = -3.14159
 scale = Vector2(5.5, 5.5)
-is_timer = true
-level_time = 10
 
 [node name="world border" type="Node2D" parent="."]
 position = Vector2(0, 653)
 script = ExtResource("5_q8tvg")
 
 [node name="Area2D" type="Area2D" parent="world border"]
+collision_mask = 7
 
 [node name="World collision shape" type="CollisionShape2D" parent="world border/Area2D"]
 shape = SubResource("WorldBoundaryShape2D_ub4ks")
 
 [node name="Area2D2" type="Area2D" parent="world border"]
+collision_mask = 7
 
 [node name="World collision shape" type="CollisionShape2D" parent="world border/Area2D2"]
 position = Vector2(0, -670)

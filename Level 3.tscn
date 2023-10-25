@@ -6,10 +6,10 @@
 [ext_resource type="Script" path="res://world border.gd" id="3_rgje2"]
 [ext_resource type="PackedScene" uid="uid://cg4xer6ftqrrp" path="res://laser.tscn" id="4_2hnhg"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_j51hu"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yecju"]
 normal = Vector2(0, -10)
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s5toe"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dnq8h"]
 normal = Vector2(0, 10)
 distance = 0.2
 
@@ -65,21 +65,25 @@ position = Vector2(1457, 61)
 [node name="laser5" parent="lasers" instance=ExtResource("4_2hnhg")]
 position = Vector2(-925, 322)
 scale = Vector2(5, 5)
+is_timer = true
+level_time = 20
 
 [node name="world border" type="Node2D" parent="."]
 position = Vector2(0, 653)
 script = ExtResource("3_rgje2")
 
 [node name="Area2D" type="Area2D" parent="world border"]
+collision_mask = 7
 
 [node name="World collision shape" type="CollisionShape2D" parent="world border/Area2D"]
-shape = SubResource("WorldBoundaryShape2D_j51hu")
+shape = SubResource("WorldBoundaryShape2D_yecju")
 
 [node name="Area2D2" type="Area2D" parent="world border"]
+collision_mask = 7
 
 [node name="World collision shape" type="CollisionShape2D" parent="world border/Area2D2"]
 position = Vector2(0, -658)
-shape = SubResource("WorldBoundaryShape2D_s5toe")
+shape = SubResource("WorldBoundaryShape2D_dnq8h")
 
 [connection signal="area_entered" from="world border/Area2D" to="world border" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="world border/Area2D2" to="world border" method="_on_area_2d_area_entered"]

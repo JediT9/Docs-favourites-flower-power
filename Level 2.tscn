@@ -60,6 +60,8 @@ laser_movement = 60
 [node name="back laser" parent="lasers" instance=ExtResource("4_kibr6")]
 position = Vector2(-998, 327)
 scale = Vector2(5.5, 5.5)
+is_timer = true
+level_time = 20
 
 [node name="laser2" parent="lasers" instance=ExtResource("4_kibr6")]
 position = Vector2(902, 297)
@@ -87,11 +89,13 @@ position = Vector2(0, 653)
 script = ExtResource("3_obonw")
 
 [node name="Area2D" type="Area2D" parent="world border"]
+collision_mask = 7
 
 [node name="World collision shape" type="CollisionShape2D" parent="world border/Area2D"]
 shape = SubResource("WorldBoundaryShape2D_axbyc")
 
 [node name="Area2D2" type="Area2D" parent="world border"]
+collision_mask = 7
 
 [node name="World collision shape" type="CollisionShape2D" parent="world border/Area2D2"]
 position = Vector2(0, -658)
