@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://xq7q16gi6rm4"]
+[gd_scene load_steps=9 format=3 uid="uid://xq7q16gi6rm4"]
 
 [ext_resource type="PackedScene" uid="uid://co3ao3r47f5sn" path="res://throwing_the_character.tscn" id="1_43bre"]
+[ext_resource type="Texture2D" uid="uid://bxqcgwnk65xff" path="res://backgroound.png" id="1_dbr2l"]
 [ext_resource type="PackedScene" uid="uid://diqam5qqbdj4b" path="res://level_goal.tscn" id="2_d5h2u"]
 [ext_resource type="PackedScene" uid="uid://dadojlmubj5n3" path="res://spike.tscn" id="3_pa027"]
 [ext_resource type="Script" path="res://world border.gd" id="3_xdixk"]
@@ -14,6 +15,15 @@ normal = Vector2(0, 10)
 distance = 0.2
 
 [node name="Level 5" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+texture_repeat = 2
+offset_left = -1052.0
+offset_right = 8948.0
+offset_bottom = 794.0
+texture = ExtResource("1_dbr2l")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Main character" parent="." instance=ExtResource("1_43bre")]
 position = Vector2(-2, 586)
