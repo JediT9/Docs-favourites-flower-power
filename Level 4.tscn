@@ -25,10 +25,12 @@ scale = Vector2(4, 4)
 [node name="Spikes" type="Node2D" parent="."]
 
 [node name="spike" parent="Spikes" instance=ExtResource("3_jl5qu")]
-position = Vector2(490, 529)
+position = Vector2(490, 538)
+scale = Vector2(0.7, 0.7)
 
 [node name="spike2" parent="Spikes" instance=ExtResource("3_jl5qu")]
 position = Vector2(1338, 531)
+scale = Vector2(0.7, 0.7)
 
 [node name="spike3" parent="Spikes" instance=ExtResource("3_jl5qu")]
 position = Vector2(2100, 614)
@@ -137,6 +139,10 @@ scale = Vector2(4, 4)
 position = Vector2(2862, 29)
 rotation = -1.5708
 scale = Vector2(4, 4)
+
+[node name="laser9" parent="lasers" instance=ExtResource("4_nerj2")]
+position = Vector2(2590, 173)
+scale = Vector2(2, 2)
 
 [node name="world border" type="Node2D" parent="."]
 position = Vector2(0, 653)
