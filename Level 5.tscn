@@ -19,7 +19,7 @@ distance = 0.2
 position = Vector2(-2, 586)
 
 [node name="level_goal" parent="." instance=ExtResource("2_d5h2u")]
-position = Vector2(6331, 287)
+position = Vector2(6551, 287)
 scale = Vector2(4, 4)
 
 [node name="Spikes" type="Node2D" parent="."]
@@ -28,42 +28,42 @@ scale = Vector2(4, 4)
 position = Vector2(665, 524)
 
 [node name="spike2" parent="Spikes" instance=ExtResource("3_pa027")]
-position = Vector2(2754, 476)
+position = Vector2(2974, 476)
 scale = Vector2(0.3, 1)
 
 [node name="spike3" parent="Spikes" instance=ExtResource("3_pa027")]
-position = Vector2(3164, 476)
-scale = Vector2(0.3, 1)
+position = Vector2(3384, 530)
+scale = Vector2(0.2, 0.667)
 
 [node name="spike4" parent="Spikes" instance=ExtResource("3_pa027")]
-position = Vector2(4250, 524)
+position = Vector2(4470, 524)
 
 [node name="spike5" parent="Spikes" instance=ExtResource("3_pa027")]
-position = Vector2(5212, 586)
+position = Vector2(5432, 586)
 scale = Vector2(0.3, 0.2)
 
 [node name="spike6" parent="Spikes" instance=ExtResource("3_pa027")]
-position = Vector2(5348, 586)
+position = Vector2(5568, 586)
 scale = Vector2(0.3, 0.2)
 
 [node name="spike7" parent="Spikes" instance=ExtResource("3_pa027")]
-position = Vector2(5484, 586)
+position = Vector2(5704, 586)
 scale = Vector2(0.3, 0.2)
 
 [node name="spike8" parent="Spikes" instance=ExtResource("3_pa027")]
-position = Vector2(5622, 586)
+position = Vector2(5842, 586)
 scale = Vector2(0.3, 0.2)
 
 [node name="spike9" parent="Spikes" instance=ExtResource("3_pa027")]
-position = Vector2(5757, 586)
+position = Vector2(5977, 586)
 scale = Vector2(0.3, 0.2)
 
 [node name="spike10" parent="Spikes" instance=ExtResource("3_pa027")]
-position = Vector2(5909, 586)
+position = Vector2(6129, 586)
 scale = Vector2(0.3, 0.2)
 
 [node name="spike11" parent="Spikes" instance=ExtResource("3_pa027")]
-position = Vector2(6037, 586)
+position = Vector2(6257, 586)
 scale = Vector2(0.3, 0.2)
 
 [node name="lasers" type="Node2D" parent="."]
@@ -77,7 +77,7 @@ scale = Vector2(4, 4)
 position = Vector2(671, 201)
 rotation = -1.5708
 scale = Vector2(4, 4)
-laser_movement = 30
+laser_movement = 20
 
 [node name="laser5" parent="lasers" instance=ExtResource("4_f582i")]
 position = Vector2(1144, 201)
@@ -102,7 +102,7 @@ rotation = -1.5708
 scale = Vector2(4, 58)
 
 [node name="laser6" parent="lasers" instance=ExtResource("4_f582i")]
-position = Vector2(4256, 201)
+position = Vector2(4476, 201)
 rotation = -1.5708
 scale = Vector2(4, 4)
 laser_movement = 30
