@@ -21,7 +21,7 @@ var line_angle: float
 
 # Define constants
 const SPEED_MODIFIER: int = 5
-const LINE_DAMPING: float = 0.25
+const LINE_DAMPING: float = 0.02
 const MAX_LINE_LENGTH = 200
 
 
@@ -100,7 +100,7 @@ func _process(delta) -> void:
 				$Character_sprite.scale.y = 1
 				# Calculate speed and angle from the line length
 				var speed: float = (
-					sqrt(pow(line.points[1][0], 2) + pow(line.points[1][1], 2))
+					sqrt(sqrt(pow(line.points[1][0], 2)) + sqrt(pow(line.points[1][1], 2)))
 					/ (SPEED_MODIFIER * LINE_DAMPING)
 				)
 				line_angle = atan(line.points[1][1] / line.points[1][0])
