@@ -18,17 +18,19 @@ func _ready():
 		area.collision_layer = 2
 		area.collision_mask = 2
 
+
 # Called when the character enters the laser
 func _on_laser_area_area_entered(_area: Node2D) -> void:
-	
 	# Set the previous scene to the current level
 	PrevScene.previous_scene = get_tree().current_scene.scene_file_path
-	
+
 	# Change to the death screen
 	get_tree().change_scene_to_file("res://Death page.tscn")
 
+
 # Make the laser move
 func _physics_process(delta) -> void:
+	# Check if the laser moves or is a timer
 	if laser_movement != 0 and is_timer == false:
 		time += delta
 		# Set the new y-position

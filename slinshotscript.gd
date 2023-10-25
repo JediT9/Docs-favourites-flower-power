@@ -44,7 +44,7 @@ func _ready() -> void:
 	intended_position = position
 	parent_node = get_parent()
 	camera = parent_node.get_node("Camera2D")
-	
+
 	# Check the camera offset isn't larger than the screen size
 	if camera_offset - 25 > (DisplayServer.window_get_size()[0] / 2):
 		camera_offset = DisplayServer.window_get_size()[0] / 2
@@ -94,7 +94,7 @@ func _process(delta) -> void:
 					line.points[1] = line_end_pos
 				# Squish the character based on the launch speed
 				$Character_sprite.scale.y = 1 - (line_length / (MAX_LINE_LENGTH * 2))
-				
+
 			elif Input.is_action_just_released("left_click"):
 				# Launch the character
 				$Character_sprite.scale.y = 1
