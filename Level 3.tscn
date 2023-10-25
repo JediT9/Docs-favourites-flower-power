@@ -54,13 +54,13 @@ position = Vector2(3872, 514)
 position = Vector2(490, 342)
 
 [node name="laser2" parent="lasers" instance=ExtResource("4_2hnhg")]
-position = Vector2(512, 61)
+position = Vector2(564, 61)
 
 [node name="laser3" parent="lasers" instance=ExtResource("4_2hnhg")]
 position = Vector2(1396, 342)
 
 [node name="laser4" parent="lasers" instance=ExtResource("4_2hnhg")]
-position = Vector2(1418, 61)
+position = Vector2(1457, 61)
 
 [node name="laser5" parent="lasers" instance=ExtResource("4_2hnhg")]
 position = Vector2(-925, 322)

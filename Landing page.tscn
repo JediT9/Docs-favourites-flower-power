@@ -39,7 +39,7 @@ shape = SubResource("RectangleShape2D_shogy")
 [node name="Level 3 button" type="Area2D" parent="Landing sprite"]
 
 [node name="Level 3 button collision" type="CollisionShape2D" parent="Landing sprite/Level 3 button"]
-position = Vector2(73, -162)
+position = Vector2(73, -161)
 shape = SubResource("RectangleShape2D_shogy")
 
 [node name="Level 4 button" type="Area2D" parent="Landing sprite"]
