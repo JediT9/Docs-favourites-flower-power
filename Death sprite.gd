@@ -12,7 +12,7 @@ func _ready():
 	position.x = DisplayServer.window_get_size()[0] / 2.0
 	scale.x = (DisplayServer.window_get_size()[0]) / image_width
 	scale.y = (DisplayServer.window_get_size()[1]) / image_height
-	
+
 	# Set the death counter
 	var death_label: RichTextLabel = $"Death counter"
 	death_label.text = ""

@@ -95,7 +95,10 @@ func _process(delta) -> void:
 				else:
 					line.points[1] = line_end_pos
 				# Squish the character based on the launch speed
-				$Character_sprite.scale.y = DEFAULT_SCALE - ((DEFAULT_SCALE * line_length) / (MAX_LINE_LENGTH * MAX_SQUISH_DIVIDER))
+				$Character_sprite.scale.y = (
+					DEFAULT_SCALE
+					- ((DEFAULT_SCALE * line_length) / (MAX_LINE_LENGTH * MAX_SQUISH_DIVIDER))
+				)
 
 			elif Input.is_action_just_released("left_click"):
 				# Launch the character
