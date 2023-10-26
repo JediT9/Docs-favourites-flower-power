@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg4xer6ftqrrp"]
+
+[ext_resource type="Script" path="res://Scripts/laser_endgame.gd" id="1_kmv3u"]
+[ext_resource type="Texture2D" uid="uid://cswbpvsivilsb" path="res://Images/lazer - 10x150mm.svg" id="2_i7wnh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dbnn0"]
+size = Vector2(46.6584, 552.935)
+
+[node name="laser" type="Node2D"]
+script = ExtResource("1_kmv3u")
+
+[node name="laser_area" type="Area2D" parent="."]
+position = Vector2(-2, 6)
+scale = Vector2(0.202771, 0.211598)
+
+[node name="laser_collision_area" type="CollisionShape2D" parent="laser_area"]
+position = Vector2(11.1925, -30.7186)
+shape = SubResource("RectangleShape2D_dbnn0")
+
+[node name="laser_sprite" type="Sprite2D" parent="."]
+position = Vector2(-2, 6)
+scale = Vector2(0.202771, 0.211598)
+texture = ExtResource("2_i7wnh")
+
+[connection signal="area_entered" from="laser_area" to="." method="_on_laser_area_area_entered"]

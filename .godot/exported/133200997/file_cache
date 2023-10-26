@@ -1,13 +1,14 @@
-res://Death page.tscn::b206c3556c7b7a4c27cde36aab240734::1698030526::res://.godot/exported/133200997/export-4ef315c716d0296aff16f6b87de59574-Death page.scn
-res://Landing page.tscn::04466e156b1bac53c29c10fb0aa5e449::1698030526::res://.godot/exported/133200997/export-7091a379a53c501f18ac5e01650fc065-Landing page.scn
-res://laser.tscn::b782080a4d5968707c0d311b72d69e5b::1698030526::res://.godot/exported/133200997/export-b21fafe43ac97fc1dd338bca39523f0b-laser.scn
-res://Level 1.tscn::50653fba6ac46a7cfc230556c89c9821::1698030526::res://.godot/exported/133200997/export-52233151132438dcb14e54b6a611fbf6-Level 1.scn
-res://Level 2.tscn::54966ec3cbce9e31023d01e87888c2c3::1698030526::res://.godot/exported/133200997/export-2468da346e7cb6b72c4e956c82487391-Level 2.scn
-res://Level 3.tscn::7f78e29998f3aeb3d83dbc4e6fadddcc::1698030527::res://.godot/exported/133200997/export-04f9648e1b505879b4991b58b5d664eb-Level 3.scn
-res://Level 4.tscn::609b556a09b05e603871e6dcbb077d46::1698030527::res://.godot/exported/133200997/export-2dba2166b493051e99ef5a9176c9482a-Level 4.scn
-res://Level 5.tscn::0e65696e818aa6b88e6e9e3c09c2aeec::1698030527::res://.godot/exported/133200997/export-28d1f0f3a9063f9fecc574562b767a47-Level 5.scn
-res://level_goal.tscn::f8cc159523c61740b7cff4289071b952::1696969575::res://.godot/exported/133200997/export-e5f3793007800369481c7b7ebcd4e9bf-level_goal.scn
-res://spike.tscn::15f72b79728945f4ef2fc17488ef5be0::1698030526::res://.godot/exported/133200997/export-65a124e7c268d791d04f413a6d11990a-spike.scn
-res://throwing_the_character.tscn::ebf465ecf1b486cbf60408b91f873513::1698030526::res://.godot/exported/133200997/export-bd687b65a82233d8b2afe7713e8bbb8a-throwing_the_character.scn
-res://Tutorial level.tscn::72e7b1f8c53f9f58dba99d79ee2064fa::1698030526::res://.godot/exported/133200997/export-ba0fd99395cdd13b25204cf1893684e7-Tutorial level.scn
-res://Victory page.tscn::fdda2121106ed414e374e9a7717e77f2::1698030526::res://.godot/exported/133200997/export-47204682b89bd1b73789491596eb1057-Victory page.scn
+res://Scenes/Death page.tscn::ccb8185214532d2dd3bf989e9952f5cf::1698312607::res://.godot/exported/133200997/export-af8273a498faaa905b20b430379f87ee-Death page.scn
+res://Scenes/Landing page.tscn::edc0290bfce5aaac7e7fe392e63ab1ab::1698312607::res://.godot/exported/133200997/export-27632b9f24a07114afaeb03bbaa9aa0f-Landing page.scn
+res://Scenes/laser.tscn::778db232e6f45be19f98347a4c56c565::1698312607::res://.godot/exported/133200997/export-a0c329b33cacdbf8e1af195c6cf376db-laser.scn
+res://Scenes/Level 1.tscn::1076799dbe6169baa4cebc8322ed5510::1698312607::res://.godot/exported/133200997/export-b01cd3b6d30e54442128e297a9461d6f-Level 1.scn
+res://Scenes/Level 2.tscn::fdf7e45f537c626e10d69d4e6a6ec86d::1698312608::res://.godot/exported/133200997/export-9c0af5494f10685232a1141fc7dc7736-Level 2.scn
+res://Scenes/Level 3.tscn::a594fabeffa6794b7ff434a3f435ef32::1698312608::res://.godot/exported/133200997/export-5e76eb458104e06f9c5604b649e72c4c-Level 3.scn
+res://Scenes/Level 4.tscn::5a67f5a6fcff827f3e3ed9feb5dcdc4d::1698312608::res://.godot/exported/133200997/export-cc55c997b2ab41f0d35b3a2c037db0cf-Level 4.scn
+res://Scenes/Level 5.tscn::e1639645d20cd1c62c4b183fd58a5e4d::1698312623::res://.godot/exported/133200997/export-926de3d6c2dc33865614f54cbe5ff3e2-Level 5.scn
+res://Scenes/level_goal.tscn::a103f49a1d3728417071a19c35aabeb9::1698312608::res://.godot/exported/133200997/export-4f852630ce07422e7f77585b2e575b22-level_goal.scn
+res://Scenes/spike.tscn::2a2da695e58751ed2b9f63f2b17595ad::1698312608::res://.godot/exported/133200997/export-ebf6953affce24099cd4556af3f414ba-spike.scn
+res://Scenes/Starting area.tscn::db0fc7d72145e235ba31a862ff5feb32::1698312609::res://.godot/exported/133200997/export-7f8c064f0269be5d1a19b94265dca7b9-Starting area.scn
+res://Scenes/throwing_the_character.tscn::1a9d5283a16fd23bf5b88bcca3e70c44::1698312609::res://.godot/exported/133200997/export-445642be8ba00fff8a3782452d1b72c9-throwing_the_character.scn
+res://Scenes/Tutorial level.tscn::b4ffadb9f3e4ee08b3c5f92c697a0250::1698312609::res://.godot/exported/133200997/export-b53a4f4b45fe2ff638c0ac04b73e32b1-Tutorial level.scn
+res://Scenes/Victory page.tscn::585953265702b05e3a8bd54a26e29858::1698312609::res://.godot/exported/133200997/export-71bd31335a545242e949175edd77e378-Victory page.scn

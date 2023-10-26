@@ -1,12 +1,16 @@
-res://Tutorial level.tscn
-res://laser_endgame.gd
-res://player.gd
-res://spike.tscn
-res://throwing_the_character.tscn
-res://laser.tscn
-res://Starting area.tscn
-res://Level 1.tscn
-res://Level 2.tscn
-res://Level 3.tscn
-res://Level 4.tscn
-res://Level 5.tscn
+res://Scenes/Death page.tscn
+res://Scripts/laser_endgame.gd
+res://Scenes/Landing page.tscn
+res://Scenes/laser.tscn
+res://Scenes/Level 1.tscn
+res://Scenes/Level 2.tscn
+res://Scenes/Level 3.tscn
+res://Scenes/Level 4.tscn
+res://Scenes/Level 5.tscn
+res://Scenes/level_goal.tscn
+res://Scenes/spike.tscn
+res://Scenes/Starting area.tscn
+res://Scenes/throwing_the_character.tscn
+res://Scenes/Tutorial level.tscn
+res://Scenes/Victory page.tscn
+res://Scripts/Death sprite.gd
