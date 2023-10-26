@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698311880
+::res://::1698353370
 export_presets.cfg::TextFile::-1::1698223687::0::1::::<><>::
 ::res://Images/::1698311676
 background.png::CompressedTexture2D::4033927456274911723::1698311676::1698311676::1::::<><>::
@@ -11,25 +11,25 @@ pause.png::CompressedTexture2D::794354228046850016::1698311676::1698311676::1:::
 spike.png::CompressedTexture2D::4866926063658689598::1698311676::1698311676::1::::<><>::
 start screen with levels.png::CompressedTexture2D::2657267152123595765::1698311676::1698311676::1::::<><>::
 victory screen.png::CompressedTexture2D::6070515910842624653::1698311676::1698311676::1::::<><>::
-::res://Scenes/::1698311770
-Death page.tscn::PackedScene::7567234677601697218::1698311769::0::1::::<><>::uid://c3df362yc1nkq::::res://Images/death screen.png<>res://Scripts/Death sprite.gd
-Landing page.tscn::PackedScene::3602048355359321448::1698311769::0::1::::<><>::uid://bd4g2i3r7dv8h::::res://Images/start screen with levels.png<>res://Scripts/Landing sprite.gd
-laser.tscn::PackedScene::5255245959130484133::1698311769::0::1::::<><>::res://Scripts/laser_endgame.gd<>uid://cswbpvsivilsb::::res://Images/lazer - 10x150mm.svg
-Level 1.tscn::PackedScene::1607229495961172013::1698311769::0::1::::<><>::uid://bxqcgwnk65xff::::res://Images/background.png<>uid://co3ao3r47f5sn::::res://Scenes/throwing_the_character.tscn<>uid://diqam5qqbdj4b::::res://Scenes/level_goal.tscn<>uid://dadojlmubj5n3::::res://Scenes/spike.tscn<>uid://cg4xer6ftqrrp::::res://Scenes/laser.tscn<>res://Scripts/world border.gd
-Level 2.tscn::PackedScene::5400431230090315740::1698311769::0::1::::<><>::uid://co3ao3r47f5sn::::res://Scenes/throwing_the_character.tscn<>uid://bxqcgwnk65xff::::res://Images/background.png<>uid://diqam5qqbdj4b::::res://Scenes/level_goal.tscn<>uid://dadojlmubj5n3::::res://Scenes/spike.tscn<>uid://cg4xer6ftqrrp::::res://Scenes/laser.tscn<>res://Scripts/world border.gd
-Level 3.tscn::PackedScene::7453105316478206222::1698311769::0::1::::<><>::uid://co3ao3r47f5sn::::res://Scenes/throwing_the_character.tscn<>uid://bxqcgwnk65xff::::res://Images/background.png<>uid://diqam5qqbdj4b::::res://Scenes/level_goal.tscn<>uid://dadojlmubj5n3::::res://Scenes/spike.tscn<>uid://cg4xer6ftqrrp::::res://Scenes/laser.tscn<>res://Scripts/world border.gd
-Level 4.tscn::PackedScene::4766372984462838194::1698311769::0::1::::<><>::uid://bxqcgwnk65xff::::res://Images/background.png<>uid://co3ao3r47f5sn::::res://Scenes/throwing_the_character.tscn<>uid://diqam5qqbdj4b::::res://Scenes/level_goal.tscn<>uid://dadojlmubj5n3::::res://Scenes/spike.tscn<>uid://cg4xer6ftqrrp::::res://Scenes/laser.tscn<>res://Scripts/world border.gd
-Level 5.tscn::PackedScene::1649346377991288817::1698311769::0::1::::<><>::uid://co3ao3r47f5sn::::res://Scenes/throwing_the_character.tscn<>uid://bxqcgwnk65xff::::res://Images/background.png<>uid://diqam5qqbdj4b::::res://Scenes/level_goal.tscn<>uid://dadojlmubj5n3::::res://Scenes/spike.tscn<>uid://cg4xer6ftqrrp::::res://Scenes/laser.tscn<>res://Scripts/world border.gd
-level_goal.tscn::PackedScene::7753825874921184807::1698311769::0::1::::<><>::res://Scripts/level_goal.gd<>uid://evtmbxgcjqig::::res://Images/end button.png
-spike.tscn::PackedScene::7166321891590295334::1698311769::0::1::::<><>::res://Scripts/spike_collision.gd<>uid://cblttc0p8pjso::::res://Images/spike.png
-Starting area.tscn::PackedScene::6380608178479908796::1698311769::0::1::::<><>::uid://co3ao3r47f5sn::::res://Scenes/throwing_the_character.tscn<>res://Scripts/Starting area.gd<>uid://bxqcgwnk65xff::::res://Images/background.png<>uid://dadojlmubj5n3::::res://Scenes/spike.tscn<>res://Scripts/world border.gd
-throwing_the_character.tscn::PackedScene::5813314254823098737::1698311770::0::1::::<><>::res://Scripts/slinshotscript.gd<>uid://brjht2hykfxm3::::res://Images/character.png
-Tutorial level.tscn::PackedScene::902488916078011808::1698311770::0::1::::<><>::uid://bxqcgwnk65xff::::res://Images/background.png<>uid://co3ao3r47f5sn::::res://Scenes/throwing_the_character.tscn<>uid://diqam5qqbdj4b::::res://Scenes/level_goal.tscn<>uid://dadojlmubj5n3::::res://Scenes/spike.tscn<>uid://cg4xer6ftqrrp::::res://Scenes/laser.tscn<>res://Scripts/world border.gd
-Victory page.tscn::PackedScene::6362810108421081947::1698311770::0::1::::<><>::uid://csqurlyp6bn5f::::res://Images/victory screen.png<>res://Scripts/Victory sprite.gd
-::res://Scripts/::1698311734
-Death sprite.gd::GDScript::-1::1698311676::0::1::::<>Sprite2D<>::
+::res://Scenes/::1698312623
+Death page.tscn::PackedScene::7567234677601697218::1698312607::0::1::::<><>::uid://c3df362yc1nkq::::res://Images/death screen.png<>res://Scripts/Death sprite.gd
+Landing page.tscn::PackedScene::3602048355359321448::1698312607::0::1::::<><>::uid://bd4g2i3r7dv8h::::res://Images/start screen with levels.png<>res://Scripts/Landing sprite.gd
+laser.tscn::PackedScene::5255245959130484133::1698312607::0::1::::<><>::res://Scripts/laser_endgame.gd<>uid://cswbpvsivilsb::::res://Images/lazer - 10x150mm.svg
+Level 1.tscn::PackedScene::1607229495961172013::1698312607::0::1::::<><>::uid://bxqcgwnk65xff::::res://Images/background.png<>uid://co3ao3r47f5sn::::res://Scenes/throwing_the_character.tscn<>uid://diqam5qqbdj4b::::res://Scenes/level_goal.tscn<>uid://dadojlmubj5n3::::res://Scenes/spike.tscn<>uid://cg4xer6ftqrrp::::res://Scenes/laser.tscn<>res://Scripts/world border.gd
+Level 2.tscn::PackedScene::5400431230090315740::1698312608::0::1::::<><>::uid://co3ao3r47f5sn::::res://Scenes/throwing_the_character.tscn<>uid://bxqcgwnk65xff::::res://Images/background.png<>uid://diqam5qqbdj4b::::res://Scenes/level_goal.tscn<>uid://dadojlmubj5n3::::res://Scenes/spike.tscn<>uid://cg4xer6ftqrrp::::res://Scenes/laser.tscn<>res://Scripts/world border.gd
+Level 3.tscn::PackedScene::7453105316478206222::1698312608::0::1::::<><>::uid://co3ao3r47f5sn::::res://Scenes/throwing_the_character.tscn<>uid://bxqcgwnk65xff::::res://Images/background.png<>uid://diqam5qqbdj4b::::res://Scenes/level_goal.tscn<>uid://dadojlmubj5n3::::res://Scenes/spike.tscn<>uid://cg4xer6ftqrrp::::res://Scenes/laser.tscn<>res://Scripts/world border.gd
+Level 4.tscn::PackedScene::4766372984462838194::1698312608::0::1::::<><>::uid://bxqcgwnk65xff::::res://Images/background.png<>uid://co3ao3r47f5sn::::res://Scenes/throwing_the_character.tscn<>uid://diqam5qqbdj4b::::res://Scenes/level_goal.tscn<>uid://dadojlmubj5n3::::res://Scenes/spike.tscn<>uid://cg4xer6ftqrrp::::res://Scenes/laser.tscn<>res://Scripts/world border.gd
+Level 5.tscn::PackedScene::1649346377991288817::1698312623::0::1::::<><>::uid://co3ao3r47f5sn::::res://Scenes/throwing_the_character.tscn<>uid://bxqcgwnk65xff::::res://Images/background.png<>uid://diqam5qqbdj4b::::res://Scenes/level_goal.tscn<>uid://dadojlmubj5n3::::res://Scenes/spike.tscn<>uid://cg4xer6ftqrrp::::res://Scenes/laser.tscn<>res://Scripts/world border.gd
+level_goal.tscn::PackedScene::7753825874921184807::1698312608::0::1::::<><>::res://Scripts/level_goal.gd<>uid://evtmbxgcjqig::::res://Images/end button.png
+spike.tscn::PackedScene::7166321891590295334::1698312608::0::1::::<><>::res://Scripts/spike_collision.gd<>uid://cblttc0p8pjso::::res://Images/spike.png
+Starting area.tscn::PackedScene::6380608178479908796::1698312609::0::1::::<><>::uid://co3ao3r47f5sn::::res://Scenes/throwing_the_character.tscn<>res://Scripts/Starting area.gd<>uid://bxqcgwnk65xff::::res://Images/background.png<>uid://dadojlmubj5n3::::res://Scenes/spike.tscn<>res://Scripts/world border.gd
+throwing_the_character.tscn::PackedScene::5813314254823098737::1698312609::0::1::::<><>::res://Scripts/slinshotscript.gd<>uid://brjht2hykfxm3::::res://Images/character.png
+Tutorial level.tscn::PackedScene::902488916078011808::1698312609::0::1::::<><>::uid://bxqcgwnk65xff::::res://Images/background.png<>uid://co3ao3r47f5sn::::res://Scenes/throwing_the_character.tscn<>uid://diqam5qqbdj4b::::res://Scenes/level_goal.tscn<>uid://dadojlmubj5n3::::res://Scenes/spike.tscn<>uid://cg4xer6ftqrrp::::res://Scenes/laser.tscn<>res://Scripts/world border.gd
+Victory page.tscn::PackedScene::6362810108421081947::1698312609::0::1::::<><>::uid://csqurlyp6bn5f::::res://Images/victory screen.png<>res://Scripts/Victory sprite.gd
+::res://Scripts/::1698312203
+Death sprite.gd::GDScript::-1::1698312203::0::1::::<>Sprite2D<>::
 Landing sprite.gd::GDScript::-1::1698311676::0::1::::<>Sprite2D<>::
-laser_endgame.gd::GDScript::-1::1698311734::0::1::::<>Node2D<>::
+laser_endgame.gd::GDScript::-1::1698311893::0::1::::<>Node2D<>::
 level_goal.gd::GDScript::-1::1698311676::0::1::::<>Node2D<>::
 path calc final.gd::GDScript::-1::1698311676::0::1::::ProjectilePathCalc<>RefCounted<>::
 Prev scene.gd::GDScript::-1::1698311676::0::1::::<>Node<>::
