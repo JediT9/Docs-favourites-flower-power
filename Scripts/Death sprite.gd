@@ -24,7 +24,7 @@ func _ready():
 func _on_return_home_area_input_event(_viewport, _event, _shape_idx):
 	if Input.is_action_just_pressed("left_click"):
 		# Change the current scene
-		get_tree().change_scene_to_file("res://Landing page.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Landing page.tscn")
 
 
 # Called when the death screen restart button is pressed
