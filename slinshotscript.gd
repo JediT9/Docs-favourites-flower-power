@@ -23,6 +23,8 @@ var line_angle: float
 const SPEED_MODIFIER: int = 5
 const LINE_DAMPING: float = 0.02
 const MAX_LINE_LENGTH = 200
+const MAX_SCALE: float = 0.178
+const SCALE_DIVIDER: float = 2
 
 
 # Called when the character hits the floor, teleports the character back inside the boundaries
@@ -93,11 +95,11 @@ func _process(delta) -> void:
 				else:
 					line.points[1] = line_end_pos
 				# Squish the character based on the launch speed
-				$Character_sprite.scale.y = 1 - (line_length / (MAX_LINE_LENGTH * 2))
+				$Character_sprite.scale.y = MAX_SCALE - MAX_SCALE * (line_length / (MAX_LINE_LENGTH * SCALE_DIVIDER))
 
 			elif Input.is_action_just_released("left_click"):
 				# Launch the character
-				$Character_sprite.scale.y = 1
+				$Character_sprite.scale.y = MAX_SCALE
 				# Calculate speed and angle from the line length
 				var speed: float = (
 					sqrt(sqrt(pow(line.points[1][0], 2)) + sqrt(pow(line.points[1][1], 2)))
