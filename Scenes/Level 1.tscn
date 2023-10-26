@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://w5s3nia6dbe0"]
 
 [ext_resource type="Texture2D" uid="uid://bxqcgwnk65xff" path="res://Images/background.png" id="1_ssqma"]
-[ext_resource type="PackedScene" uid="uid://co3ao3r47f5sn" path="res://throwing_the_character.tscn" id="1_y0o3t"]
-[ext_resource type="PackedScene" uid="uid://diqam5qqbdj4b" path="res://level_goal.tscn" id="2_6wr2n"]
-[ext_resource type="PackedScene" uid="uid://dadojlmubj5n3" path="res://spike.tscn" id="3_r7ooc"]
+[ext_resource type="PackedScene" uid="uid://co3ao3r47f5sn" path="res://Scenes/throwing_the_character.tscn" id="1_y0o3t"]
+[ext_resource type="PackedScene" uid="uid://diqam5qqbdj4b" path="res://Scenes/level_goal.tscn" id="2_6wr2n"]
+[ext_resource type="PackedScene" uid="uid://dadojlmubj5n3" path="res://Scenes/spike.tscn" id="3_r7ooc"]
 [ext_resource type="PackedScene" uid="uid://cg4xer6ftqrrp" path="res://Scenes/laser.tscn" id="4_p3ytl"]
-[ext_resource type="Script" path="res://world border.gd" id="5_q8tvg"]
+[ext_resource type="Script" path="res://Scripts/world border.gd" id="6_0113h"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ub4ks"]
 normal = Vector2(0, -10)
@@ -90,7 +90,7 @@ scale = Vector2(5.5, 5.5)
 
 [node name="world border" type="Node2D" parent="."]
 position = Vector2(0, 653)
-script = ExtResource("5_q8tvg")
+script = ExtResource("6_0113h")
 
 [node name="Area2D" type="Area2D" parent="world border"]
 collision_mask = 7

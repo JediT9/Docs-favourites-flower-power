@@ -125,8 +125,7 @@ func _process(delta) -> void:
 	camera.position.x = position.x + camera_offset
 
 
-# Called when the player clicks on the character's hit box
-func _on_area_2d_input_event(_viewport, _event, _shape_idx) -> void:
+func _on_area_2d_input_event(_viewport, _event, _shape_idx):
 	print(get_local_mouse_position())
 	if Input.is_action_just_pressed("left_click"):
 		if player_state != flight_states.flying:

@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bxqcgwnk65xff" path="res://Images/background.png" id="1_be4hh"]
 [ext_resource type="PackedScene" uid="uid://diqam5qqbdj4b" path="res://Scenes/level_goal.tscn" id="2_sl67w"]
 [ext_resource type="PackedScene" uid="uid://dadojlmubj5n3" path="res://Scenes/spike.tscn" id="3_i8da7"]
-[ext_resource type="Script" path="res://world border.gd" id="3_rgje2"]
 [ext_resource type="PackedScene" uid="uid://cg4xer6ftqrrp" path="res://Scenes/laser.tscn" id="4_2hnhg"]
+[ext_resource type="Script" path="res://Scripts/world border.gd" id="6_jkqei"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yecju"]
 normal = Vector2(0, -10)
@@ -80,7 +80,7 @@ level_time = 20
 
 [node name="world border" type="Node2D" parent="."]
 position = Vector2(0, 653)
-script = ExtResource("3_rgje2")
+script = ExtResource("6_jkqei")
 
 [node name="Area2D" type="Area2D" parent="world border"]
 collision_mask = 7
