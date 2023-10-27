@@ -85,9 +85,11 @@ rotation = 1.5708
 scale = Vector2(4, 4)
 
 [node name="back laser" parent="lasers" instance=ExtResource("4_p3ytl")]
-position = Vector2(-987, 316)
+position = Vector2(-966, 319)
 rotation = -3.14159
 scale = Vector2(5.5, 5.5)
+is_timer = true
+level_time = 15
 
 [node name="world border" type="Node2D" parent="."]
 position = Vector2(0, 653)

@@ -71,7 +71,7 @@ laser_movement = 60
 position = Vector2(-998, 327)
 scale = Vector2(5.5, 5.5)
 is_timer = true
-level_time = 20
+level_time = 10
 
 [node name="laser2" parent="lasers" instance=ExtResource("4_kibr6")]
 position = Vector2(902, 297)
