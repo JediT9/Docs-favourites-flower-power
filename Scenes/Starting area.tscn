@@ -38,15 +38,15 @@ horizontal_alignment = 1
 
 [node name="First spike" type="Label" parent="Labels"]
 offset_left = 320.0
-offset_top = 424.0
+offset_top = 379.0
 offset_right = 705.0
-offset_bottom = 502.0
+offset_bottom = 457.0
 text = "Click on the character and drag 
 backwards, then release to launch 
 the character over the spike"
 horizontal_alignment = 1
 
-[node name="Advance instructions2" type="Label" parent="Labels"]
+[node name="Harmless spikes" type="Label" parent="Labels"]
 offset_left = 756.0
 offset_top = 506.0
 offset_right = 1126.0
@@ -54,6 +54,36 @@ offset_bottom = 584.0
 text = "The spikes can't hurt you, so 
 practice getting the jumps right"
 horizontal_alignment = 1
+
+[node name="World edge left" type="Label" parent="Labels"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -335.0
+offset_top = 383.0
+offset_right = -61.0
+offset_bottom = 435.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "This is the edge of the practice area
+Hit enter if you're ready to advance"
+
+[node name="World edge right" type="Label" parent="Labels"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 2800.0
+offset_top = 383.0
+offset_right = 3074.0
+offset_bottom = 435.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "This is the edge of the practice area
+Hit enter if you're ready to advance"
 
 [node name="character_throw" parent="." instance=ExtResource("1_nlcq8")]
 position = Vector2(487, 587)

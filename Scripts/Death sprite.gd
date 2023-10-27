@@ -1,17 +1,20 @@
 extends Sprite2D
 
-# Set the image sizes
-const image_height: float = 794
-const image_width: float = 1123
+# Set the image scale and position
+const X_SCALE: float = 0.89047193527222
+const Y_SCALE: float = 0.81612092256546
+const Y_POSITION: float = 324
+const X_POSITION: float = 500
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# Center the image on the screen
-	position.y = DisplayServer.window_get_size()[1] / 2.0
-	position.x = DisplayServer.window_get_size()[0] / 2.0
-	scale.x = (DisplayServer.window_get_size()[0]) / image_width
-	scale.y = (DisplayServer.window_get_size()[1]) / image_height
+	position.y = Y_POSITION
+	position.x = X_POSITION
+	scale.x = X_SCALE
+	scale.y = Y_SCALE
+	
 
 	# Set the death counter
 	var death_label: RichTextLabel = $"Death counter"

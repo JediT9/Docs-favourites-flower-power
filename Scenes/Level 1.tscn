@@ -26,45 +26,45 @@ texture = ExtResource("1_ssqma")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Main character" parent="." instance=ExtResource("1_y0o3t")]
-position = Vector2(155, 586)
-
 [node name="level_goal" parent="." instance=ExtResource("2_6wr2n")]
 position = Vector2(2886, 330)
 scale = Vector2(4, 4)
 
+[node name="Main character" parent="." instance=ExtResource("1_y0o3t")]
+position = Vector2(155, 586)
+
 [node name="Spikes" type="Node2D" parent="."]
 
 [node name="spike" parent="Spikes" instance=ExtResource("3_r7ooc")]
-position = Vector2(403, 585)
+position = Vector2(403, 565)
 scale = Vector2(0.4, 0.4)
 
 [node name="spike2" parent="Spikes" instance=ExtResource("3_r7ooc")]
-position = Vector2(884, 599)
+position = Vector2(884, 579)
 scale = Vector2(0.3, 0.3)
 
 [node name="spike3" parent="Spikes" instance=ExtResource("3_r7ooc")]
-position = Vector2(1070, 584)
+position = Vector2(1070, 564)
 scale = Vector2(0.4, 0.4)
 
 [node name="spike4" parent="Spikes" instance=ExtResource("3_r7ooc")]
-position = Vector2(1275, 584)
+position = Vector2(1275, 564)
 scale = Vector2(0.4, 0.4)
 
 [node name="spike5" parent="Spikes" instance=ExtResource("3_r7ooc")]
-position = Vector2(1967, 612)
+position = Vector2(1967, 597)
 scale = Vector2(0.2, 0.2)
 
 [node name="spike6" parent="Spikes" instance=ExtResource("3_r7ooc")]
-position = Vector2(2090, 612)
+position = Vector2(2090, 597)
 scale = Vector2(0.2, 0.2)
 
 [node name="spike7" parent="Spikes" instance=ExtResource("3_r7ooc")]
-position = Vector2(2215, 612)
+position = Vector2(2215, 597)
 scale = Vector2(0.2, 0.2)
 
 [node name="spike8" parent="Spikes" instance=ExtResource("3_r7ooc")]
-position = Vector2(2339, 612)
+position = Vector2(2339, 597)
 scale = Vector2(0.2, 0.2)
 
 [node name="lasers" type="Node2D" parent="."]

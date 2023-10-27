@@ -25,49 +25,49 @@ texture = ExtResource("1_be4hh")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Main character" parent="." instance=ExtResource("1_13ma2")]
-position = Vector2(119, 587)
-
 [node name="level_goal" parent="." instance=ExtResource("2_sl67w")]
 position = Vector2(4288, 319)
 scale = Vector2(4, 4)
 
+[node name="Main character" parent="." instance=ExtResource("1_13ma2")]
+position = Vector2(119, 587)
+
 [node name="Spikes" type="Node2D" parent="."]
 
 [node name="spike" parent="Spikes" instance=ExtResource("3_i8da7")]
-position = Vector2(488, 520)
+position = Vector2(488, 511)
 
 [node name="spike2" parent="Spikes" instance=ExtResource("3_i8da7")]
-position = Vector2(1395, 520)
+position = Vector2(1395, 511)
 
 [node name="spike3" parent="Spikes" instance=ExtResource("3_i8da7")]
-position = Vector2(2326, 515)
+position = Vector2(2326, 512)
 
 [node name="spike4" parent="Spikes" instance=ExtResource("3_i8da7")]
-position = Vector2(2634, 515)
+position = Vector2(2634, 512)
 
 [node name="spike5" parent="Spikes" instance=ExtResource("3_i8da7")]
-position = Vector2(2945, 515)
+position = Vector2(2945, 512)
 
 [node name="spike6" parent="Spikes" instance=ExtResource("3_i8da7")]
-position = Vector2(3253, 514)
+position = Vector2(3253, 511)
 
 [node name="spike7" parent="Spikes" instance=ExtResource("3_i8da7")]
-position = Vector2(3561, 514)
+position = Vector2(3561, 511)
 
 [node name="spike8" parent="Spikes" instance=ExtResource("3_i8da7")]
-position = Vector2(3872, 514)
+position = Vector2(3872, 511)
 
 [node name="lasers" type="Node2D" parent="."]
 
 [node name="laser" parent="lasers" instance=ExtResource("4_2hnhg")]
-position = Vector2(490, 342)
+position = Vector2(490, 332)
 
 [node name="laser2" parent="lasers" instance=ExtResource("4_2hnhg")]
 position = Vector2(564, 61)
 
 [node name="laser3" parent="lasers" instance=ExtResource("4_2hnhg")]
-position = Vector2(1396, 342)
+position = Vector2(1396, 332)
 
 [node name="laser4" parent="lasers" instance=ExtResource("4_2hnhg")]
 position = Vector2(1457, 61)
@@ -76,7 +76,7 @@ position = Vector2(1457, 61)
 position = Vector2(-925, 322)
 scale = Vector2(5, 5)
 is_timer = true
-level_time = 5
+level_time = 30
 
 [node name="world border" type="Node2D" parent="."]
 position = Vector2(0, 653)

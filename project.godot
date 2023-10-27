@@ -10,9 +10,12 @@ config_version=5
 
 [application]
 
-config/name="Godot"
+config/name="Esmeralda vs bank"
 run/main_scene="res://Scenes/Starting area.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
+config/icon="res://Images/Game icon.png"
+config/macos_native_icon="res://Images/Mac icon.icns"
+config/windows_native_icon="res://Images/Game icon windows.ico"
 
 [autoload]
 

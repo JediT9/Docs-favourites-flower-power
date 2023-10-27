@@ -25,7 +25,9 @@ const LINE_DAMPING: float = 0.02
 const MAX_LINE_LENGTH = 200
 const DEFAULT_SCALE: float = 0.178
 const MAX_SQUISH_DIVIDER: float = 2
-
+# Set the image sizes
+const HALF_SCREEN_Y: float = 324
+const HALF_SCREEN_X: float = 500
 
 # Called when the character hits the floor, teleports the character back inside the boundaries
 func handle_hit_floor() -> void:
@@ -47,12 +49,8 @@ func _ready() -> void:
 	parent_node = get_parent()
 	camera = parent_node.get_node("Camera2D")
 
-	# Check the camera offset isn't larger than the screen size
-	if camera_offset - 25 > (DisplayServer.window_get_size()[0] / 2):
-		camera_offset = DisplayServer.window_get_size()[0] / 2
-
 	# Set the camera position
-	camera.position.y = (DisplayServer.window_get_size()[1] / 2.0) - parent_node.position.y
+	camera.position.y = HALF_SCREEN_Y - parent_node.position.y
 
 	# Connect to the floor node
 	var floor_node: Node2D = get_tree().root.get_child(-1).get_child(-1)
