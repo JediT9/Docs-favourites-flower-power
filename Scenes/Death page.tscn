@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://df2viqqpa7smc"]
+
+[ext_resource type="Texture2D" uid="uid://c3df362yc1nkq" path="res://Images/death screen.png" id="1_oslpk"]
+[ext_resource type="Script" path="res://Scripts/Death sprite.gd" id="2_yiss2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sx1dv"]
+size = Vector2(397, 134)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cnf4h"]
+size = Vector2(314, 91)
+
+[node name="Death page" type="Node2D"]
+
+[node name="Death sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_oslpk")
+script = ExtResource("2_yiss2")
+
+[node name="Return home area" type="Area2D" parent="Death sprite"]
+
+[node name="Return home shape" type="CollisionShape2D" parent="Death sprite/Return home area"]
+position = Vector2(-7.5, 148)
+shape = SubResource("RectangleShape2D_sx1dv")
+
+[node name="Restart area" type="Area2D" parent="Death sprite"]
+
+[node name="Restart collision" type="CollisionShape2D" parent="Death sprite/Restart area"]
+position = Vector2(-4, -32.5)
+shape = SubResource("RectangleShape2D_cnf4h")
+
+[node name="Death counter" type="RichTextLabel" parent="Death sprite"]
+anchors_preset = -1
+anchor_left = 0.236
+anchor_top = 0.41
+anchor_right = 0.236
+anchor_bottom = 0.41
+offset_left = -396.028
+offset_top = -478.54
+offset_right = -44.028
+offset_bottom = -395.54
+theme_override_font_sizes/normal_font_size = 50
+
+[connection signal="input_event" from="Death sprite/Return home area" to="Death sprite" method="_on_return_home_area_input_event"]
+[connection signal="input_event" from="Death sprite/Restart area" to="Death sprite" method="_on_restart_area_input_event"]
