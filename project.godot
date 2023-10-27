@@ -21,6 +21,7 @@ PrevScene="*res://Scripts/Prev scene.gd"
 [display]
 
 window/size/viewport_width=1000
+window/stretch/mode="canvas_items"
 
 [input]
 

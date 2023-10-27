@@ -18,8 +18,8 @@ distance = 0.2
 
 [node name="Background" type="TextureRect" parent="."]
 texture_repeat = 2
-offset_left = -1052.0
-offset_right = 4275.0
+offset_left = -1424.0
+offset_right = 4576.0
 offset_bottom = 794.0
 texture = ExtResource("1_6rbbb")
 stretch_mode = 1
